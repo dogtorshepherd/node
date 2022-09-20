@@ -1,0 +1,30 @@
+### Create User
+POST http://localhost:8080/api/users/
+Content-Type: application/json
+
+{
+    "user_id": "Hola",
+    "firstname": "Hola",
+    "lastname": "Hola",
+    "role": "Hola",
+    "username": "Hola",
+    "password": "Hola"
+}
+### Read All User
+GET http://localhost:8080/api/users/
+### Read User By Role
+GET http://localhost:8080/api/users/?role=Hola
+### Update User
+PUT http://localhost:8080/api/users/Hola
+Content-Type: application/json
+
+{
+    "user_id": "Hola2",
+    "firstname": "Hola2",
+    "lastname": "Hola2",
+    "role": "Hola2",
+    "username": "Hola2",
+    "password": "Hola2"
+}
+### Delete User
+DELETE http://localhost:8080/api/users/Hola
