@@ -1,6 +1,12 @@
 const express = require("express");
 // const bodyParser = require("body-parser"); /* deprecated */
 const cors = require("cors");
+const multer = require('multer')
+const upload = multer({ dest: 'uploads' })
+const fs = require("fs");
+var es = require('event-stream');
+const { parse } = require("csv-parse");
+const sql = require("./app/models/db.js");
 
 const app = express();
 
@@ -20,6 +26,54 @@ app.use(express.urlencoded({ extended: true })); /* bodyParser.urlencoded() is d
 app.get("/", (req, res) => {
   res.json({ message: "Welcome to bezkoder application." });
 });
+
+app.post('/upload', upload.single('file'), (req, res) => {
+  const secId = req.query.sec_id
+  res.json({ message: "Upload Success" });
+  const bcrypt = require('bcrypt');
+  const saltRounds = 10;
+  let userList = []
+  fs.createReadStream(req.file.path)
+  .pipe(parse({ delimiter: ",", from_line: 2 }))
+  .on("data", function (row) {
+    const User = require("./app/models/user.model.js");
+    const user = {
+      user_id: row[0],
+      firstname: row[1],
+      lastname: row[2],
+      role: "student",
+      username: row[0],
+      password: row[0],
+      avatar: "https://icon-library.com/images/person-icon-gif/person-icon-gif-10.jpg"
+    };
+    userList.push(user)
+  })
+  .on("end", function () {
+    for (const user of userList) {
+      Object.keys(user).forEach(k => user[k] = user[k].trim());
+      bcrypt.hash(user.password, saltRounds).then(function(hash) {
+        user.password = hash
+        sql.query("INSERT INTO user SET ?", user, (err, res) => {
+          if (err) {
+            console.log("error: ", err);
+          }
+          // console.log("created user: ", { user_id: res.insertId, ...user });
+          let query = `INSERT INTO student (std_id, sec_id)
+                        VALUES ('${user.user_id}', ${secId});`;
+          sql.query(query, (err, res) => {
+            if (err) {
+              console.log("error: ", err);
+            }
+            console.log("created student");
+          });
+        })
+      });
+    }
+  })
+  .on("error", function (error) {
+    console.log(error.message);
+  });
+})
 
 require("./app/routes/user.routes.js")(app);
 require("./app/routes/sec.routes.js")(app);

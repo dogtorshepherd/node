@@ -1,0 +1,16 @@
+### Create Student
+POST http://localhost:8080/api/student/
+Content-Type: application/json
+
+{
+    "student_id": "Hola",
+    "firstname": "Hola",
+    "lastname": "Hola",
+    "role": "Hola",
+    "studentname": "Hola",
+    "password": "Hola"
+}
+### Read Student
+GET http://localhost:8080/api/student/?sec_id=4
+### Delete Student
+DELETE http://localhost:8080/api/student/?sec_id=4

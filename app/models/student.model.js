@@ -2,12 +2,8 @@ const sql = require("./db.js");
 
 // constructor
 const Student = function(student) {
-  this.student_id = student.student_id;
-  this.firstname = student.firstname;
-  this.lastname = student.lastname;
-  this.role = student.role;
-  this.studentname = student.studentname;
-  this.password = student.password;
+  this.id = student.id;
+  this.name = student.name;
 };
 
 Student.create = (newStudent, result) => {
@@ -23,31 +19,11 @@ Student.create = (newStudent, result) => {
   });
 };
 
-Student.findById = (student_id, result) => {
-  sql.query(`SELECT * FROM student WHERE student_id = ${student_id}`, (err, res) => {
-    if (err) {
-      console.log("error: ", err);
-      result(err, null);
-      return;
-    }
-
-    if (res.length) {
-      console.log("found student: ", res[0]);
-      result(null, res[0]);
-      return;
-    }
-
-    // not found Student with the student_id
-    result({ kind: "not_found" }, null);
-  });
-};
-
-Student.getAll = (role, result) => {
-  let query = "SELECT * FROM student";
-
-  if (role) {
-    query += ` WHERE role LIKE '%${role}%'`;
-  }
+Student.getAll = (sec_id, result) => {
+  let query = `SELECT student.std_id as id, CONCAT(user.firstname, " ", user.lastname) as name
+              FROM (student
+              INNER JOIN user ON student.std_id = user.user_id)
+              WHERE sec_id = '${sec_id}';`;
 
   sql.query(query, (err, res) => {
     if (err) {
@@ -61,72 +37,17 @@ Student.getAll = (role, result) => {
   });
 };
 
-// Student.getAllPublished = result => {
-//   sql.query("SELECT * FROM student WHERE published=true", (err, res) => {
-//     if (err) {
-//       console.log("error: ", err);
-//       result(null, err);
-//       return;
-//     }
-
-//     console.log("student: ", res);
-//     result(null, res);
-//   });
-// };
-
-Student.updateById = (student_id, student, result) => {
-  sql.query(
-    "UPDATE student SET firstname = ?, lastname = ?, role = ?, studentname = ?, password = ? WHERE student_id = ?",
-    [student.firstname, student.lastname, student.role, student.studentname, student.password, student_id],
-    (err, res) => {
-      if (err) {
-        console.log("error: ", err);
-        result(null, err);
-        return;
-      }
-
-      if (res.affectedRows == 0) {
-        // not found Student with the student_id
-        result({ kind: "not_found" }, null);
-        return;
-      }
-
-      console.log("updated student: ", { student_id: student_id, ...student });
-      result(null, { student_id: student_id, ...student });
-    }
-  );
-};
-
-Student.remove = (student_id, result) => {
-  sql.query("DELETE FROM student WHERE student_id = ?", student_id, (err, res) => {
+Student.removeAll = (sec_id, result) => {
+  sql.query(`DELETE FROM student WHERE student.sec_id = '${sec_id}'`, (err, res) => {
     if (err) {
       console.log("error: ", err);
       result(null, err);
       return;
     }
 
-    if (res.affectedRows == 0) {
-      // not found Student with the student_id
-      result({ kind: "not_found" }, null);
-      return;
-    }
-
-    console.log("deleted student with student_id: ", student_id);
+    console.log(`deleted ${res.affectedRows} student`);
     result(null, res);
   });
 };
-
-// Student.removeAll = result => {
-//   sql.query("DELETE FROM student", (err, res) => {
-//     if (err) {
-//       console.log("error: ", err);
-//       result(null, err);
-//       return;
-//     }
-
-//     console.log(`deleted ${res.affectedRows} student`);
-//     result(null, res);
-//   });
-// };
 
 module.exports = Student;
