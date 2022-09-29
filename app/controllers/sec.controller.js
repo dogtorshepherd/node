@@ -11,3 +11,14 @@ exports.findAll = (req, res) => {
     else res.send(data);
   });
 };
+
+exports.findByTeacherId = (req, res) => {
+  Sec.getByTeacherId(req.params.teacherId, (err, data) => {
+    if (err)
+      res.status(500).send({
+        message:
+          err.message || "Some error occurred while retrieving sec."
+      });
+    else res.send(data);
+  });
+};

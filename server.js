@@ -4,6 +4,7 @@ const cors = require("cors");
 const multer = require('multer')
 const upload = multer({ dest: 'uploads' })
 const fs = require("fs");
+const sqlite3 = require("sqlite3").verbose();
 var es = require('event-stream');
 const { parse } = require("csv-parse");
 const sql = require("./app/models/db.js");
@@ -73,6 +74,54 @@ app.post('/upload', upload.single('file'), (req, res) => {
   .on("error", function (error) {
     console.log(error.message);
   });
+})
+
+app.post('/uploadExam', upload.single('file'), (req, res) => {
+  if(req.file.originalname === 'generate.sql'){
+    res.json({ message: "Upload Success" });
+    
+    const examSecId = req.query.sec_id
+    const examPath = req.file.path
+    const examFile = req.file
+    console.log("examSecId : " + examSecId)
+    console.log("examPath : " + examPath)
+    console.log("examFile : " + examFile)
+  
+    const fs = require('fs');
+    const initSqlJs = require('sql.js');
+    const filebuffer = fs.readFileSync(examPath);
+  
+    initSqlJs().then(function(SQL){
+      const db = new SQL.Database(filebuffer);
+      var mysql = require('mysql');
+
+      var con = mysql.createConnection({
+        host: "localhost",
+        user: "root",
+        password: "][p'",
+        database: "generate"
+      });
+
+      con.connect(function(err) {
+        if (err) throw err;
+        console.log("Connected!");
+        let query = "SELECT * FROM quest";      
+        con.query(query, (err, res) => {
+          if (err) {
+            console.log("error: ", err);
+          }
+          console.log(res);
+          for (const quest of res){
+            console.log("Num : " + quest.questNum);
+            console.log("Detail : " + quest.questDetail);
+          }
+          con.end();
+        });
+      });
+    });
+  } else {
+    res.json({ message: "Not support" });
+  }
 })
 
 require("./app/routes/user.routes.js")(app);
