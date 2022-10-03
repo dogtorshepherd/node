@@ -23,11 +23,6 @@ app.use(express.json()); /* bodyParser.json() is deprecated */
 // parse requests of content-type - application/x-www-form-urlencoded
 app.use(express.urlencoded({ extended: true })); /* bodyParser.urlencoded() is deprecated */
 
-// simple route
-app.get("/", (req, res) => {
-  res.json({ message: "Welcome to bezkoder application." });
-});
-
 app.post('/upload', upload.single('file'), (req, res) => {
   const secId = req.query.sec_id
   res.json({ message: "Upload Success" });
@@ -80,45 +75,45 @@ app.post('/uploadExam', upload.single('file'), (req, res) => {
   if(req.file.originalname === 'generate.sql'){
     res.json({ message: "Upload Success" });
     
-    const examSecId = req.query.sec_id
-    const examPath = req.file.path
-    const examFile = req.file
-    console.log("examSecId : " + examSecId)
-    console.log("examPath : " + examPath)
-    console.log("examFile : " + examFile)
+    // const examSecId = req.query.sec_id
+    // const examPath = req.file.path
+    // const examFile = req.file
+    // console.log("examSecId : " + examSecId)
+    // console.log("examPath : " + examPath)
+    // console.log("examFile : " + examFile)
   
-    const fs = require('fs');
-    const initSqlJs = require('sql.js');
-    const filebuffer = fs.readFileSync(examPath);
+    // const fs = require('fs');
+    // const initSqlJs = require('sql.js');
+    // const filebuffer = fs.readFileSync(examPath);
   
-    initSqlJs().then(function(SQL){
-      const db = new SQL.Database(filebuffer);
-      var mysql = require('mysql');
+    // initSqlJs().then(function(SQL){
+    //   const db = new SQL.Database(filebuffer);
+    //   var mysql = require('mysql');
 
-      var con = mysql.createConnection({
-        host: "localhost",
-        user: "root",
-        password: "][p'",
-        database: "generate"
-      });
+    //   var con = mysql.createConnection({
+    //     host: "localhost",
+    //     user: "root",
+    //     password: "][p'",
+    //     database: "generate"
+    //   });
 
-      con.connect(function(err) {
-        if (err) throw err;
-        console.log("Connected!");
-        let query = "SELECT * FROM quest";      
-        con.query(query, (err, res) => {
-          if (err) {
-            console.log("error: ", err);
-          }
-          console.log(res);
-          for (const quest of res){
-            console.log("Num : " + quest.questNum);
-            console.log("Detail : " + quest.questDetail);
-          }
-          con.end();
-        });
-      });
-    });
+    //   con.connect(function(err) {
+    //     if (err) throw err;
+    //     console.log("Connected!");
+    //     let query = "SELECT * FROM quest";      
+    //     con.query(query, (err, res) => {
+    //       if (err) {
+    //         console.log("error: ", err);
+    //       }
+    //       console.log(res);
+    //       for (const quest of res){
+    //         console.log("Num : " + quest.questNum);
+    //         console.log("Detail : " + quest.questDetail);
+    //       }
+    //       con.end();
+    //     });
+    //   });
+    // });
   } else {
     res.json({ message: "Not support" });
   }
@@ -127,6 +122,8 @@ app.post('/uploadExam', upload.single('file'), (req, res) => {
 require("./app/routes/user.routes.js")(app);
 require("./app/routes/sec.routes.js")(app);
 require("./app/routes/student.routes.js")(app);
+require("./app/routes/quest.routes.js")(app);
+require("./app/routes/answer.routes.js")(app);
 
 // set port, listen for requests
 const PORT = process.env.PORT || 8080;

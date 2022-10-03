@@ -1,55 +1,20 @@
-const sql = require("./db.js");
+const generate = require("./generateDb.js");
+const sql_exam = require("./db.js");
 
 // constructor
 const Quest = function(quest) {
-  this.quest_id = quest.quest_id;
-  this.firstname = quest.firstname;
-  this.lastname = quest.lastname;
-  this.role = quest.role;
-  this.questname = quest.questname;
-  this.password = quest.password;
+  this.questNum = quest.questNum;
+  this.questDetail = quest.questDetail;
+  this.questType = quest.questType;
 };
 
-Quest.create = (newQuest, result) => {
-  sql.query("INSERT INTO quest SET ?", newQuest, (err, res) => {
-    if (err) {
-      console.log("error: ", err);
-      result(err, null);
-      return;
-    }
-
-    console.log("created quest: ", { quest_id: res.insertId, ...newQuest });
-    result(null, { quest_id: res.insertId, ...newQuest });
-  });
-};
-
-Quest.findById = (quest_id, result) => {
-  sql.query(`SELECT * FROM quest WHERE quest_id = ${quest_id}`, (err, res) => {
-    if (err) {
-      console.log("error: ", err);
-      result(err, null);
-      return;
-    }
-
-    if (res.length) {
-      console.log("found quest: ", res[0]);
-      result(null, res[0]);
-      return;
-    }
-
-    // not found Quest with the quest_id
-    result({ kind: "not_found" }, null);
-  });
-};
-
-Quest.getAll = (role, result) => {
-  let query = "SELECT * FROM quest";
-
-  if (role) {
-    query += ` WHERE role LIKE '%${role}%'`;
-  }
-
-  sql.query(query, (err, res) => {
+Quest.getAll = result => {
+  console.log("getAll")
+  let query = `SELECT quest.questNum as num, quest.questDetail as detail, answer.ansDetail as answer
+              FROM (quest
+              INNER JOIN answer ON quest.questNum = answer.ansNum);`;
+  
+  generate.query(query, (err, res) => {
     if (err) {
       console.log("error: ", err);
       result(null, err);
@@ -61,44 +26,47 @@ Quest.getAll = (role, result) => {
   });
 };
 
-// Quest.getAllPublished = result => {
-//   sql.query("SELECT * FROM quest WHERE published=true", (err, res) => {
-//     if (err) {
-//       console.log("error: ", err);
-//       result(null, err);
-//       return;
-//     }
-
-//     console.log("quest: ", res);
-//     result(null, res);
-//   });
-// };
-
-Quest.updateById = (quest_id, quest, result) => {
-  sql.query(
-    "UPDATE quest SET firstname = ?, lastname = ?, role = ?, questname = ?, password = ? WHERE quest_id = ?",
-    [quest.firstname, quest.lastname, quest.role, quest.questname, quest.password, quest_id],
-    (err, res) => {
-      if (err) {
-        console.log("error: ", err);
-        result(null, err);
-        return;
-      }
-
-      if (res.affectedRows == 0) {
-        // not found Quest with the quest_id
-        result({ kind: "not_found" }, null);
-        return;
-      }
-
-      console.log("updated quest: ", { quest_id: quest_id, ...quest });
-      result(null, { quest_id: quest_id, ...quest });
-    }
-  );
+// Exam Constructor
+const Exam = function(exam) {
+  this.secId = exam.secId;
+  this.num = exam.num;
+  this.detail = exam.detail;
+  this.answer = exam.answer;
 };
 
-Quest.remove = (quest_id, result) => {
-  sql.query("DELETE FROM quest WHERE quest_id = ?", quest_id, (err, res) => {
+Exam.create = (newExam, result) => {
+  console.log("Exam.create")
+  console.log(newExam)
+  // sql_exam.query("INSERT INTO quest SET ?", newExam, (err, res) => {
+  //   if (err) {
+  //     console.log("error: ", err);
+  //     result(err, null);
+  //     return;
+  //   }
+
+  //   console.log("created exam: ", { exam_id: res.insertId, ...newExam });
+  //   result(null, { exam_id: res.insertId, ...newExam });
+  // });
+};
+
+Exam.getAll = (sec_id, result) => {
+  let query = `SELECT * FROM quest
+              WHERE sec_id = '${sec_id}';`;
+
+  sql_exam.query(query, (err, res) => {
+    if (err) {
+      console.log("error: ", err);
+      result(null, err);
+      return;
+    }
+
+    console.log("exam: ", res);
+    result(null, res);
+  });
+};
+
+Exam.remove = (sec_id, result) => {
+  sql_exam.query("DELETE FROM quest WHERE sec_id = ?", sec_id, (err, res) => {
     if (err) {
       console.log("error: ", err);
       result(null, err);
@@ -106,27 +74,14 @@ Quest.remove = (quest_id, result) => {
     }
 
     if (res.affectedRows == 0) {
-      // not found Quest with the quest_id
+      // not found Exam with the sec_id
       result({ kind: "not_found" }, null);
       return;
     }
 
-    console.log("deleted quest with quest_id: ", quest_id);
+    console.log("deleted user with sec_id: ", sec_id);
     result(null, res);
   });
 };
 
-// Quest.removeAll = result => {
-//   sql.query("DELETE FROM quest", (err, res) => {
-//     if (err) {
-//       console.log("error: ", err);
-//       result(null, err);
-//       return;
-//     }
-
-//     console.log(`deleted ${res.affectedRows} quest`);
-//     result(null, res);
-//   });
-// };
-
-module.equestports = Quest;
+module.exports = { Quest, Exam };

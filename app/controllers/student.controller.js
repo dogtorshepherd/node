@@ -1,18 +1,4 @@
-const multer = require('multer')
-const upload = multer({ dest: 'uploads' })
-
 const Student = require("../models/student.model.js");
-
-// Create and Save a new Student
-exports.create = (req, res) => {
-  // Validate request
-  if (!req.body) {
-    res.status(400).send({
-      message: "Content can not be empty!"
-    });
-  }
-  res.send("5555")
-};
 
 // Retrieve all Student from the database (with condition).
 exports.findAll = (req, res) => {

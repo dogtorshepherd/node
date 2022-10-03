@@ -1,0 +1,2 @@
+### Read All Answer
+GET http://localhost:8080/api/answer/

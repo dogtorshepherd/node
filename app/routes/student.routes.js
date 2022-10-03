@@ -3,9 +3,6 @@ module.exports = app => {
 
   var router = require("express").Router();
 
-  // Create a new Student
-  router.post("/", student.create);
-
   // Retrieve all Student
   router.get("/", student.findAll);
 
