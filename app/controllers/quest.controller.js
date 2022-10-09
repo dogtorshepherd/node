@@ -1,19 +1,6 @@
-const { Quest, Exam } = require("../models/quest.model.js");
+const { Quest } = require("../models/quest.model.js");
 
-// Retrieve all Quest from the database (with condition).
-exports.findAll = (req, res) => {
-  console.log("findAll")
-  Quest.getAll((err, data) => {
-    if (err)
-      res.status(500).send({
-        message:
-          err.message || "Some error occurred while retrieving quest."
-      });
-    else res.send(data);
-  });
-};
-
-// Create and Save a new Exam
+// Create and Save a new Quest
 exports.create = (req, res) => {
   // Validate request
   if (!req.body) {
@@ -22,51 +9,33 @@ exports.create = (req, res) => {
     });
   }
 
-  // Create a Exam
-  const exam = new Exam({
+  // Create a Quest
+  const quest = {
     secId: req.body.secId,
-    num: req.body.num,
-    detail: req.body.detail,
-    answer: req.body.answer,
-  });
+    ruleForm: req.body.ruleForm,
+  };
 
-  // Save Exam in the database
-  Exam.create(exam, (err, data) => {
+  // Save Quest in the database
+  Quest.create(quest, (err, data) => {
     if (err)
       res.status(500).send({
         message:
-          err.message || "Some error occurred while creating the Exam."
+          err.message || "Some error occurred while creating the Quest."
       });
     else res.send(data);
   });
 };
 
-// Retrieve all Exam from the database (with condition).
-exports.findExam = (req, res) => {
+// Retrieve all Quest from the database (with condition).
+exports.find = (req, res) => {
   const secId = req.query.secId;
-  Exam.getAll(secId, (err, data) => {
+  // console.log("secId : " + secId)
+  Quest.getAll(secId, (err, data) => {
     if (err)
       res.status(500).send({
         message:
-          err.message || "Some error occurred while retrieving exam."
+          err.message || "Some error occurred while retrieving quest."
       });
     else res.send(data);
-  });
-};
-
-// Delete a Exam with the specified secId in the request
-exports.delete = (req, res) => {
-  Exam.remove(req.params.secId, (err, data) => {
-    if (err) {
-      if (err.kind === "not_found") {
-        res.status(404).send({
-          message: `Not found Exam with secId ${req.params.secId}.`
-        });
-      } else {
-        res.status(500).send({
-          message: "Could not delete Exam with secId " + req.params.secId
-        });
-      }
-    } else res.send({ message: `Exam was deleted successfully!` });
   });
 };
