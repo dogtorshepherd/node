@@ -6,6 +6,6 @@ module.exports = app => {
   // Retrieve all Sec
   router.get("/", sec.findAll);
   router.get("/student", sec.findByStudentId);
-  router.get("/:teacherId", sec.findByTeacherId);
+  router.get("/teacher", sec.findByTeacherId);
   app.use('/api/sec', router);
 };

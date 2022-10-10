@@ -2,6 +2,7 @@ const Student = require("../models/student.model.js");
 
 // Retrieve all Student from the database (with condition).
 exports.findAll = (req, res) => {
+  console.log("findAll")
   // Validate request
   if (!req.query.sec_id) {
     res.status(400).send({
@@ -21,6 +22,7 @@ exports.findAll = (req, res) => {
 
 // Retrieve all Student and score from the database (with condition).
 exports.findAllScore = (req, res) => {
+  console.log("findAllScore")
   // Validate request
   if (!req.query.sec_id) {
     res.status(400).send({

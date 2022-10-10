@@ -38,15 +38,14 @@ Student.getAll = (sec_id, result) => {
 };
 
 Student.getAllScore = (sec_id, result) => {
-  let query = `SELECT student.std_id as id, CONCAT(user.firstname, " ", user.lastname) as name, COALESCE(SUM(B.score), 0) AS 'score'
-              FROM (student
-              INNER JOIN user ON student.std_id = user.user_id
-              LEFT JOIN
-              (
-              SELECT std_id, score FROM score GROUP BY std_id;
-              ) B
-              ON student.std_id = B.std_id)
-              WHERE sec_id = '${sec_id}';`;
+  console.log("getAllScore")
+  console.log("sec_id : " + sec_id)
+  let query = `SELECT student.std_id as id, CONCAT(user.firstname, " ", user.lastname) as name, COALESCE(SUM(score.score), 0) AS score
+  FROM (student
+  INNER JOIN user ON student.std_id = user.user_id
+  LEFT JOIN score ON student.std_id = score.std_id)
+  WHERE sec_id = ${sec_id}
+  GROUP BY student.std_id;`;
 
   sql.query(query, (err, res) => {
     if (err) {
