@@ -6,6 +6,9 @@ module.exports = app => {
   // Create a new Quest
   router.post("/", quest.create);
 
+  // Create a new Quest Single
+  router.post("/single", quest.createSingle);
+
   // Retrieve Quest by SecId
   router.get("/", quest.find);
 

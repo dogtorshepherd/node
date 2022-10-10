@@ -22,3 +22,14 @@ exports.findByTeacherId = (req, res) => {
     else res.send(data);
   });
 };
+
+exports.findByStudentId = (req, res) => {
+  Sec.getByStudentId(req.query.studentId, (err, data) => {
+    if (err)
+      res.status(500).send({
+        message:
+          err.message || "Some error occurred while retrieving sec."
+      });
+    else res.send(data);
+  });
+};

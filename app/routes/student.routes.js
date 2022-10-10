@@ -6,6 +6,9 @@ module.exports = app => {
   // Retrieve all Student
   router.get("/", student.findAll);
 
+  // Retrieve all Student and score
+  router.get("/score", student.findAllScore);
+
   // Delete all Student
   router.delete("/", student.deleteAll);
 

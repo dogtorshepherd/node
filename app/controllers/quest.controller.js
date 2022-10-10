@@ -26,6 +26,34 @@ exports.create = (req, res) => {
   });
 };
 
+// Create and Save a new Quest Single
+exports.createSingle = (req, res) => {
+  // Validate request
+  if (!req.body) {
+    res.status(400).send({
+      message: "Content can not be empty!"
+    });
+  }
+
+  // Create a Quest
+  const quest = {
+    question: req.body.question,
+    answer: req.body.answer,
+    score: req.body.score,
+    sec_id: req.body.sec_id,
+  };
+
+  // Save Quest in the database
+  Quest.createSingle(quest, (err, data) => {
+    if (err)
+      res.status(500).send({
+        message:
+          err.message || "Some error occurred while creating the Quest."
+      });
+    else res.send(data);
+  });
+};
+
 // Retrieve all Quest from the database (with condition).
 exports.find = (req, res) => {
   const secId = req.query.secId;

@@ -37,6 +37,29 @@ Student.getAll = (sec_id, result) => {
   });
 };
 
+Student.getAllScore = (sec_id, result) => {
+  let query = `SELECT student.std_id as id, CONCAT(user.firstname, " ", user.lastname) as name, COALESCE(SUM(B.score), 0) AS 'score'
+              FROM (student
+              INNER JOIN user ON student.std_id = user.user_id
+              LEFT JOIN
+              (
+              SELECT std_id, score FROM score GROUP BY std_id;
+              ) B
+              ON student.std_id = B.std_id)
+              WHERE sec_id = '${sec_id}';`;
+
+  sql.query(query, (err, res) => {
+    if (err) {
+      console.log("error: ", err);
+      result(null, err);
+      return;
+    }
+
+    console.log("student: ", res);
+    result(null, res);
+  });
+};
+
 Student.removeAll = (sec_id, result) => {
   sql.query(`DELETE FROM student WHERE student.sec_id = '${sec_id}'`, (err, res) => {
     if (err) {

@@ -77,7 +77,7 @@ Quest.create = (quest, result) => {
               if (err) {
                 console.log("error: ", err);
               }
-              result(null, res);
+              // result(null, res);
               // console.log("created exam: ", { exam_id: res.insertId, ...newExam });
             });
           }
@@ -93,7 +93,7 @@ Quest.create = (quest, result) => {
               if (err) {
                 console.log("error: ", err);
               }
-              result(null, res);
+              // result(null, res);
               // console.log("created exam: ", { exam_id: res.insertId, ...newExam });
             });
           }
@@ -109,7 +109,7 @@ Quest.create = (quest, result) => {
               if (err) {
                 console.log("error: ", err);
               }
-              result(null, res);
+              // result(null, res);
               // console.log("created exam: ", { exam_id: res.insertId, ...newExam });
             });
           }
@@ -125,7 +125,7 @@ Quest.create = (quest, result) => {
               if (err) {
                 console.log("error: ", err);
               }
-              result(null, res);
+              // result(null, res);
               // console.log("created exam: ", { exam_id: res.insertId, ...newExam });
             });
           }
@@ -133,12 +133,26 @@ Quest.create = (quest, result) => {
           // console.log("Q : " + selectQuestSelected[0])
           // console.log("A : " + selectAnswerSelected[0])
         }
-        return;
       }
+      result(null, {"RESULT":"OK"});
+      return;
     })
     .on("error", function (error) {
       console.log(error.message);
     });
+};
+
+Quest.createSingle = (quest, result) => {
+  const {
+    question, answer, score, sec_id
+  } = quest;
+  sql_exam.query("INSERT INTO exam SET ?", {sec_id, question, answer, score}, (err, res) => {
+    if (err) {
+      console.log("error: ", err);
+    }
+    result(null, res);
+    return;
+  });
 };
 
 Quest.getAll = (secId, result) => {

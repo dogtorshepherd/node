@@ -40,7 +40,7 @@ app.post('/upload', upload.single('file'), (req, res) => {
       role: "student",
       username: row[0],
       password: row[0],
-      avatar: "https://icon-library.com/images/person-icon-gif/person-icon-gif-10.jpg"
+      avatar: "https://icon-library.com/images/human-icon/human-icon-22.jpg"
     };
     userList.push(user)
   })
