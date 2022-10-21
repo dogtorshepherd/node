@@ -1,10 +1,10 @@
 ﻿q,a
-List ข้อมูลทั้งหมดของ products ที่ price product อยู่ในช่วง 148 ถึง 176.,"SELECT  *  FROM products  WHERE PPrice BETWEEN ""148"" AND ""176"";"
-List ข้อมูลทั้งหมดของ customers ที่ customer number อยู่ในช่วง Bihpx ถึง Xvnez.,"SELECT  *  FROM customers  WHERE CustomerNo BETWEEN ""Bihpx"" AND ""Xvnez"";"
-Show ข้อมูลทั้งหมดของ orders_details ที่ product number อยู่ในช่วง Kxbjy ถึง Ogsme.,"SELECT  *  FROM orders_details  WHERE ProductNo BETWEEN ""Kxbjy"" AND ""Ogsme"";"
-Select ข้อมูลทั้งหมดของ customers ที่ customer number อยู่ในช่วง Ntvzw ถึง Skvmj.,"SELECT  *  FROM customers  WHERE CustomerNo BETWEEN ""Ntvzw"" AND ""Skvmj"";"
-Select ข้อมูลทั้งหมดของ products ที่ price product อยู่ในช่วง 112 ถึง 378.,"SELECT  *  FROM products  WHERE PPrice BETWEEN ""112"" AND ""378"";"
-Select ข้อมูลทั้งหมดของ orders_details ที่ order number อยู่ในช่วง Dqkfu ถึง Ifuyw.,"SELECT  *  FROM orders_details  WHERE OrderNo BETWEEN ""Dqkfu"" AND ""Ifuyw"";"
+แสดง ข้อมูลทั้งหมดของ products ที่ price product อยู่ในช่วง 148 ถึง 176.,"SELECT  *  FROM products  WHERE PPrice BETWEEN ""148"" AND ""176"";"
+แสดง ข้อมูลทั้งหมดของ customers ที่ customer number อยู่ในช่วง 20 ถึง 30,"SELECT  *  FROM customers  WHERE CustomerNo BETWEEN ""20"" AND ""30"";"
+แสดง ข้อมูลทั้งหมดของ orders_details ที่ product number อยู่ในช่วง Kxbjy ถึง Ogsme.,"SELECT  *  FROM orders_details  WHERE ProductNo BETWEEN ""Kxbjy"" AND ""Ogsme"";"
+แสดง ข้อมูลทั้งหมดของ customers ที่ customer number อยู่ในช่วง Ntvzw ถึง Skvmj.,"SELECT  *  FROM customers  WHERE CustomerNo BETWEEN ""Ntvzw"" AND ""Skvmj"";"
+แสดง ข้อมูลทั้งหมดของ products ที่ price product อยู่ในช่วง 112 ถึง 378.,"SELECT  *  FROM products  WHERE PPrice BETWEEN ""112"" AND ""378"";"
+แสดง ข้อมูลทั้งหมดของ orders_details ที่ order number อยู่ในช่วง Dqkfu ถึง Ifuyw.,"SELECT  *  FROM orders_details  WHERE OrderNo BETWEEN ""Dqkfu"" AND ""Ifuyw"";"
 แสดง ข้อมูลทั้งหมดของ products ที่ price product อยู่ในช่วง Mzrdf ถึง Rtqcd.,"SELECT  *  FROM products  WHERE PPrice BETWEEN ""Mzrdf"" AND ""Rtqcd"";"
 แสดง ข้อมูลทั้งหมดของ orders_details ที่ order number อยู่ในช่วง Euavx ถึง Vkagx.,"SELECT  *  FROM orders_details  WHERE OrderNo BETWEEN ""Euavx"" AND ""Vkagx"";"
 แสดง ข้อมูลทั้งหมดของ products ที่ product number อยู่ในช่วง Pqghe ถึง Yzaow.,"SELECT  *  FROM products  WHERE ProductNo BETWEEN ""Pqghe"" AND ""Yzaow"";"
@@ -83,8 +83,8 @@ Select ข้อมูลทั้งหมดของ orders_details ที่
 แสดง quantity จากตาราง orders_details  สำหรับ quantity ที่ quantity product มากกว่า 4 .,SELECT  quantity  FROM orders_details  WHERE quantity > 4 ;
 แสดง ข้อมูลทั้งหมดของ ตารางorderss .,SELECT  *  FROM orderss ;
 แสดง ข้อมูลทั้งหมดของ ตารางproducts .,SELECT  *  FROM products ;
-Give ข้อมูลทั้งหมดof all ตารางorderss  โดย customer number เป็นCU-001,"SELECT  *  FROM orderss  WHERE CustomerNo  =  ""CU-001"" ;"
-Give ข้อมูลทั้งหมดof all ตารางorderss  โดย date order เป็น2016-04-08,"SELECT  *  FROM orderss  WHERE ODate  =  ""2016-04-08"" ;"
+แสดง ข้อมูลทั้งหมดof all ตารางorderss  โดย customer number เป็นCU-001,"SELECT  *  FROM orderss  WHERE CustomerNo  =  ""CU-001"" ;"
+แสดง ข้อมูลทั้งหมดof all ตารางorderss  โดย date order เป็น2016-04-08,"SELECT  *  FROM orderss  WHERE ODate  =  ""2016-04-08"" ;"
 แสดง ข้อมูลทั้งหมดของ ตารางorderss .,SELECT  *  FROM orderss ;
 แสดง ข้อมูลทั้งหมดของ ตารางorders_details .,SELECT  *  FROM orders_details ;
 แสดง ข้อมูลทั้งหมดของ ตารางproducts .,SELECT  *  FROM products ;
@@ -93,10 +93,10 @@ Give ข้อมูลทั้งหมดof all ตารางorderss  โ�
 แสดง ข้อมูลทั้งหมดของ ตารางorders_details .,SELECT  *  FROM orders_details ;
 แสดง ข้อมูลทั้งหมดของ ตารางorderss .,SELECT  *  FROM orderss ;
 แสดง ข้อมูลทั้งหมดของ ตารางproducts .,SELECT  *  FROM products ;
-Choose ข้อมูลทั้งหมดof all ตารางorderss  โดย total order เป็น89,SELECT  *  FROM orderss  WHERE Ototal  =  89 ;
-Choose ข้อมูลทั้งหมดof all ตารางorderss  โดย order number เป็นOR-002,"SELECT  *  FROM orderss  WHERE OrderNo  =  ""OR-002"" ;"
-Give ข้อมูลทั้งหมดof all ตารางproducts  โดย product name เป็นBARF,"SELECT  *  FROM products  WHERE PName  =  ""BARF"" ;"
-Retrieve ข้อมูลทั้งหมดof all ตารางorders_details  โดย product number เป็น001,"SELECT  *  FROM orders_details  WHERE ProductNo  =  ""001"" ;"
+แสดง ข้อมูลทั้งหมดof all ตารางorderss  โดย total order เป็น89,SELECT  *  FROM orderss  WHERE Ototal  =  89 ;
+แสดง ข้อมูลทั้งหมดof all ตารางorderss  โดย order number เป็นOR-002,"SELECT  *  FROM orderss  WHERE OrderNo  =  ""OR-002"" ;"
+แสดง ข้อมูลทั้งหมดof all ตารางproducts  โดย product name เป็นBARF,"SELECT  *  FROM products  WHERE PName  =  ""BARF"" ;"
+แสดง ข้อมูลทั้งหมดof all ตารางorders_details  โดย product number เป็น001,"SELECT  *  FROM orders_details  WHERE ProductNo  =  ""001"" ;"
 แสดง ข้อมูลทั้งหมดของ ตารางorderss .,SELECT  *  FROM orderss ;
 แสดง ข้อมูลทั้งหมดของ ตารางproducts .,SELECT  *  FROM products ;
 แสดง ข้อมูลทั้งหมดของ ตารางorders_details .,SELECT  *  FROM orders_details ;
@@ -117,24 +117,6 @@ Retrieve ข้อมูลทั้งหมดof all ตารางorders_det
 แสดงphone number จากตาราง customers  ที่ขึ้นต้นด้วย Y .,"SELECT  CPhone  FROM customers  WHERE CPhone LIKE ""Y%  "" ;"
 แสดงproduct name จากตาราง products  ที่ขึ้นต้นด้วย N และลงท้ายด้วย Q.,"SELECT  PName  FROM products  WHERE PName LIKE ""N%  ""%Q"" ;"
 แสดงphone number จากตาราง customers  ที่ขึ้นต้นด้วย X .,"SELECT  CPhone  FROM customers  WHERE CPhone LIKE ""X%  "" ;"
-List  orders_details and orderss in the same OrderNo .,SELECT  *  FROM orders_details  JOIN  orderss  WHERE  orders_details.OrderNo = orderss.OrderNo ;
-"Show  quantity along with all the values for ODate, Ototal contained in the orderss table .","SELECT  orders_details.quantity, orderss.ODate, orderss.Ototal  FROM orders_details  JOIN  orderss  ON  orders_details.OrderNo = orderss.OrderNo ;"
-List  Ototal along with all the values for OrderNo contained in the orders_details table  by each OrderNo.,"SELECT  orderss.Ototal, orders_details.OrderNo  FROM orderss  ,  orders_details  WHERE  orderss.OrderNo = orders_details.OrderNo ;"
-List  quantity along with all the values for ODate contained in the orderss table  by each OrderNo.,"SELECT  orders_details.quantity, orderss.ODate  FROM orders_details  ,  orderss  WHERE  orders_details.OrderNo = orderss.OrderNo ;"
-List  quantity along with all the values for ODate contained in the orderss table .,"SELECT  orders_details.quantity, orderss.ODate  FROM orders_details  JOIN  orderss  ON  orders_details.OrderNo = orderss.OrderNo ;"
-List  Ototal along with all the values for OrderNo contained in the orders_details table .,"SELECT  orderss.Ototal, orders_details.OrderNo  FROM orderss  JOIN  orders_details  ON  orderss.OrderNo = orders_details.OrderNo ;"
-"Select  Ototal along with all the values for OrderNo, quantity, ProductNo contained in the orders_details table .","SELECT  orderss.Ototal, orders_details.OrderNo, orders_details.quantity, orders_details.ProductNo  FROM orderss  JOIN  orders_details  ON  orderss.OrderNo = orders_details.OrderNo ;"
-Select  PTotal along with all the values for quantity contained in the orders_details table  by each ProductNo.,"SELECT  products.PTotal, orders_details.quantity  FROM products  ,  orders_details  WHERE  products.ProductNo = orders_details.ProductNo ;"
-"Select  Ototal along with all the values for OrderNo, quantity, ProductNo contained in the orders_details table  by each OrderNo.","SELECT  orderss.Ototal, orders_details.OrderNo, orders_details.quantity, orders_details.ProductNo  FROM orderss  ,  orders_details  WHERE  orderss.OrderNo = orders_details.OrderNo ;"
-Select  products and orders_details in the same ProductNo .,SELECT  *  FROM products  JOIN  orders_details  WHERE  products.ProductNo = orders_details.ProductNo ;
-Show  PTotal along with all the values for ProductNo contained in the orders_details table  by each ProductNo.,"SELECT  products.PTotal, orders_details.ProductNo  FROM products  ,  orders_details  WHERE  products.ProductNo = orders_details.ProductNo ;"
-List  orderss and orders_details in the same OrderNo .,SELECT  *  FROM orderss  JOIN  orders_details  WHERE  orderss.OrderNo = orders_details.OrderNo ;
-"Show  Ototal along with all the values for CAddress, CPhone, CustomerNo, CName contained in the customers table .","SELECT  orderss.Ototal, customers.CAddress, customers.CPhone, customers.CustomerNo, customers.CName  FROM orderss  JOIN  customers  ON  orderss.CustomerNo = customers.CustomerNo ;"
-"List  PTotal along with all the values for OrderNo, ProductNo, quantity contained in the orders_details table  by each ProductNo.","SELECT  products.PTotal, orders_details.OrderNo, orders_details.ProductNo, orders_details.quantity  FROM products  ,  orders_details  WHERE  products.ProductNo = orders_details.ProductNo ;"
-"Show  quantity along with all the values for PTotal, PName, PPrice contained in the products table  by each ProductNo.","SELECT  orders_details.quantity, products.PTotal, products.PName, products.PPrice  FROM orders_details  ,  products  WHERE  orders_details.ProductNo = products.ProductNo ;"
-"Show  quantity along with all the values for PTotal, PName, PPrice contained in the products table .","SELECT  orders_details.quantity, products.PTotal, products.PName, products.PPrice  FROM orders_details  JOIN  products  ON  orders_details.ProductNo = products.ProductNo ;"
-Select  orderss and customers in the same CustomerNo .,SELECT  *  FROM orderss  JOIN  customers  WHERE  orderss.CustomerNo = customers.CustomerNo ;
-"Show  Ototal along with all the values for CAddress, CPhone, CustomerNo, CName contained in the customers table  by each CustomerNo.","SELECT  orderss.Ototal, customers.CAddress, customers.CPhone, customers.CustomerNo, customers.CName  FROM orderss  ,  customers  WHERE  orderss.CustomerNo = customers.CustomerNo ;"
 แสดงรายละเอียดของตาราง  quantity พร้อมทั้ง feild_name1 และ feild_name2 จากตาราง  products .,"SELECT  orders_details.quantity, products.PName  FROM orders_details  JOIN  products  ON  orders_details.ProductNo = products.ProductNo ;"
 แสดงรายละเอียดของตาราง  CPhone พร้อมทั้ง feild_name1 และ feild_name2 จากตาราง  orderss  ของแต่ละ  CustomerNo.,"SELECT  customers.CPhone, orderss.ODate, orderss.Ototal, orderss.OrderNo  FROM customers  ,  orderss  WHERE  customers.CustomerNo = orderss.CustomerNo ;"
 แสดงรายละเอียดของตาราง  CPhone พร้อมทั้ง feild_name1 และ feild_name2 จากตาราง  orderss .,"SELECT  customers.CPhone, orderss.ODate, orderss.Ototal, orderss.OrderNo  FROM customers  JOIN  orderss  ON  customers.CustomerNo = orderss.CustomerNo ;"
@@ -182,15 +164,6 @@ Listรายละเอียดของตาราง  orders_details แ�
 แสดง  the  ค่าเฉลี่ยของ price product และจำนวนของ  product number  โดยจัดกลุ่มตาม PPrice  ซึ่งค่าเฉลี่ยของ  average  price product ต้อง  น้อยกว่า  70.,"SELECT PPrice, AVG(PPrice), ProductNo =  COUNT(*) FROM products GROUP BY PPrice HAVING AVG(PPrice)  < 70 ;"
 แสดง  the  ค่าเฉลี่ยของ quantity product และจำนวนของ  order number  โดยจัดกลุ่มตาม ProductNo  ซึ่งค่าเฉลี่ยของ  average  quantity product ต้อง  มากกว่า  47.,"SELECT ProductNo, AVG(quantity), OrderNo =  COUNT(*) FROM orders_details GROUP BY ProductNo HAVING AVG(quantity)  > 47 ;"
 แสดง  the  ค่าเฉลี่ยของ quantity product และจำนวนของ  order number  โดยจัดกลุ่มตาม ProductNo  ซึ่งค่าเฉลี่ยของ  average  quantity product ต้อง  น้อยกว่า  47.,"SELECT ProductNo, AVG(quantity), OrderNo =  COUNT(*) FROM orders_details GROUP BY ProductNo HAVING AVG(quantity)  < 47 ;"
-แสดง ProductNo for each  order number  orders_details sorted in  so that the orders_details with the largest ProductNo appear first  ค่าเฉลี่ยของ  total  มากกว่า  08.,"SELECT ProductNo, AVG(quantity), OrderNo =  COUNT(*) FROM orders_details GROUP BY ProductNo HAVING AVG(quantity)  < 08 ;"
-แสดง ODate for each  total order  orderss sorted in  so that the orderss with the largest ODate appear first  ค่าเฉลี่ยของ  total  มากกว่า  65.,"SELECT ODate, AVG(Ototal), CustomerNo =  COUNT(*) FROM orderss GROUP BY ODate HAVING AVG(Ototal)  < 65 ;"
-แสดง ODate for each  total order  orderss sorted in  so that the orderss with the largest ODate appear first  ค่าเฉลี่ยของ  total  มากกว่า  น้อยกว่า .,"SELECT ODate, AVG(Ototal), CustomerNo =  COUNT(*) FROM orderss GROUP BY ODate HAVING AVG(Ototal)  > 65 ;"
-"แสดง ProductNo,PTotal,PPrice for each  product number  products sorted in  so that the products with the largest PPrice appear first  ค่าเฉลี่ยของ  total  มากกว่า  น้อยกว่า .","SELECT PPrice, AVG(PPrice), ProductNo =  COUNT(*) FROM products GROUP BY PPrice HAVING AVG(PPrice)  > 81 ;"
-แสดง order number  orders_details sorted in  so that the orders_details with the largest ProductNo appear first  ค่าเฉลี่ยของ  total  มากกว่า  53.,"SELECT ProductNo, AVG(quantity), OrderNo =  COUNT(*) FROM orders_details GROUP BY ProductNo HAVING AVG(quantity)  < 53 ;"
-แสดง order number  orders_details sorted in  so that the orders_details with the largest ProductNo appear first  ค่าเฉลี่ยของ  total  มากกว่า  น้อยกว่า .,"SELECT ProductNo, AVG(quantity), OrderNo =  COUNT(*) FROM orders_details GROUP BY ProductNo HAVING AVG(quantity)  > 53 ;"
-แสดง total order  orderss sorted in  so that the orderss with the largest OrderNo appear first  ค่าเฉลี่ยของ  total  มากกว่า  น้อยกว่า .,"SELECT OrderNo, AVG(Ototal), CustomerNo =  COUNT(*) FROM orderss GROUP BY OrderNo HAVING AVG(Ototal)  > 64 ;"
-แสดง product number  products sorted in  so that the products with the largest PName appear first  ค่าเฉลี่ยของ  total  มากกว่า  น้อยกว่า .,"SELECT PName, AVG(PPrice), ProductNo =  COUNT(*) FROM products GROUP BY PName HAVING AVG(PPrice)  > 79 ;"
-แสดง total order  orderss sorted in  so that the orderss with the largest OrderNo appear first  ค่าเฉลี่ยของ  total  มากกว่า  64.,"SELECT OrderNo, AVG(Ototal), CustomerNo =  COUNT(*) FROM orderss GROUP BY OrderNo HAVING AVG(Ototal)  < 64 ;"
 แสดง   ค่าเฉลี่ยของ price product และจำนวนของ  product number  โดยจัดกลุ่มตาม PName  ซึ่ง  ค่าเฉลี่ยของ  price product ต้อง  น้อยกว่า  17.,"SELECT PName, AVG(PPrice), ProductNo =  COUNT(*) FROM products GROUP BY PName HAVING AVG(PPrice)  < 17 ;"
 แสดง   ค่าเฉลี่ยของ price product และจำนวนของ  product number  โดยจัดกลุ่มตาม PName  ซึ่ง  ค่าเฉลี่ยของ  price product ต้อง  มากกว่า  17.,"SELECT PName, AVG(PPrice), ProductNo =  COUNT(*) FROM products GROUP BY PName HAVING AVG(PPrice)  > 17 ;"
 แสดง   ค่าเฉลี่ยของ quantity product และจำนวนของ  order number  โดยจัดกลุ่มตาม quantity  ซึ่ง  ค่าเฉลี่ยของ  quantity product ต้อง  มากกว่า  03.,"SELECT quantity, AVG(quantity), OrderNo =  COUNT(*) FROM orders_details GROUP BY quantity HAVING AVG(quantity)  > 03 ;"
@@ -206,64 +179,6 @@ Listรายละเอียดของตาราง  orders_details แ�
 แสดง ค่าเฉลี่ยของ total order และจำนวนของ  total order  โดยจัดกลุ่มตาม ODate  ซึ่งค่าเฉลี่ยของ  total order ต้องน้อยกว่า  93.,"SELECT ODate, AVG(Ototal), CustomerNo =  COUNT(*) FROM orderss GROUP BY ODate HAVING AVG(Ototal)  < 93 ;"
 แสดง ค่าเฉลี่ยของ price product และจำนวนของ  product number  โดยจัดกลุ่มตาม PTotal  ซึ่งค่าเฉลี่ยของ  price product ต้องมากกว่า  43.,"SELECT PTotal, AVG(PPrice), ProductNo =  COUNT(*) FROM products GROUP BY PTotal HAVING AVG(PPrice)  > 43 ;"
 แสดง ค่าเฉลี่ยของ quantity product และจำนวนของ  order number  โดยจัดกลุ่มตาม quantity  ซึ่งค่าเฉลี่ยของ  quantity product ต้องน้อยกว่า  52.,"SELECT quantity, AVG(quantity), OrderNo =  COUNT(*) FROM orders_details GROUP BY quantity HAVING AVG(quantity)  < 52 ;"
-อะไร  is  ที่  total  quantity  of  orders_details ?,SELECT SUM(quantity)  FROM orders_details ;
-คำนวน  is  ที่  lowest  of all  Ototal ?,SELECT MIN(Ototal)  FROM orderss ;
-คำนวน  is  ที่  total  quantity  in the  orders_details ?,SELECT SUM(quantity)  FROM orders_details ;
-คำนวน  is  ที่  total  PPrice  to  products  จาก product name เป็น BARF ?,"SELECT SUM(PPrice)  FROM products  WHERE  PName = ""BARF"" ;"
-คำนวน  is  ที่  total  PPrice  to  products ?,SELECT SUM(PPrice)  FROM products ;
-คำนวน  of all  assigned  orders_details  ที่ order number เป็น OR-004  ที่มีมากกว่า 03 ?,SELECT SUM(quantity)  FROM orders_details ;
-คำนวน  of all  assigned  products  ที่ product name เป็น BARF  ที่มีมากกว่า 67  ทั้งหมด?,"SELECT STD(PPrice)  FROM products  WHERE  PName = ""BARF"" ;"
-อะไร  of all  assigned  orders_details  ที่ order number เป็น OR-004  ที่มีมากกว่า 79  ทั้งหมด?,"SELECT MAX(quantity)  FROM orders_details  WHERE  OrderNo = ""OR-004"" ;"
-อะไร  of all  assigned  quantity  orders_details ?,SELECT MAX(quantity)  FROM orders_details ;
-อะไร  of all  assigned  products  price product  ที่มีมากกว่า 81 ?,SELECT SUM(PPrice)  FROM products  WHERE  PPrice > 81;
-คำนวน  of all  assigned  Ototal  orderss ?,SELECT  AVG(Ototal)  FROM orderss ;
-อะไร  of all  assigned  orderss  ที่ order number เป็น OR-004  ที่มีมากกว่า 85 ?,SELECT MAX(Ototal)  FROM orderss ;
-จำนวน  of all  assigned  products  price product  ที่มีมากกว่า 82 ?,SELECT SUM(PPrice)  FROM products  WHERE  PPrice > 82;
-จำนวน  of all  assigned  orders_details  ที่ order number เป็น OR-004  ที่มีมากกว่า 57 ?,SELECT MIN(quantity)  FROM orders_details ;
-อะไร  of all  assigned  Ototal  orderss ?,SELECT MAX(Ototal)  FROM orderss ;
-จำนวน  of all  assigned  orderss  ที่ order number เป็น OR-004  ที่มีมากกว่า 71 ?,SELECT SUM(Ototal)  FROM orderss ;
-คำนวน  of all  assigned  quantity  orders_details ?,SELECT MAX(quantity)  FROM orders_details ;
-จำนวน  of all  assigned  products  ที่ product name เป็น BARF  ที่มีมากกว่า 02  ทั้งหมด?,"SELECT  AVG(PPrice)  FROM products  WHERE  PName = ""BARF"" ;"
-คำนวน  of all  assigned  orderss  ที่ order number เป็น OR-004  ที่มีมากกว่า 24  ทั้งหมด?,"SELECT MIN(Ototal)  FROM orderss  WHERE  OrderNo = ""OR-004"" ;"
-คำนวน  of all  assigned  orderss  ที่ order number เป็น OR-004  ที่มีมากกว่า 24 ?,SELECT MIN(Ototal)  FROM orderss ;
-จำนวน  ของ  ของ  orderss  ที่ order number เป็น OR-004  ที่มีมากกว่า 87 ?,"SELECT MIN(Ototal) , MAX(Ototal)  FROM orderss ;"
-คำนวน  ของ  ของ  orders_details  ที่ order number เป็น OR-004  ที่มีมากกว่า 42  ทั้งหมด?,"SELECT SUM(quantity)  FROM orders_details  WHERE  OrderNo = ""OR-004"" ;"
-คำนวน  ของ  ของ  orderss  ที่ order number เป็น OR-004  ที่มีมากกว่า 28 ?,SELECT MAX(Ototal)  FROM orderss ;
-อะไร  ของ  ของ  products  ที่ product name เป็น BARF  ที่มีมากกว่า 32  ทั้งหมด?,"SELECT STD(PPrice)  FROM products  WHERE  PName = ""BARF"" ;"
-คำนวน  ของ  ของ  orders_details  quantity product  ที่มีมากกว่า 42 ?,SELECT SUM(quantity)  FROM orders_details  WHERE  quantity > 42;
-คำนวน  ของ  ของ  Ototal  orderss ?,SELECT MAX(Ototal)  FROM orderss ;
-อะไร  ของ  ของ  orderss  ที่ order number เป็น OR-004  ที่มีมากกว่า 94 ?,"SELECT MIN(Ototal) , MAX(Ototal)  FROM orderss ;"
-จำนวน  of all  assigned  orders_details  ที่ order number เป็น OR-004  ที่มีมากกว่า 80 ?,SELECT SUM(quantity)  FROM orders_details ;
-จำนวน  of all  assigned  orders_details  quantity product  ที่มีมากกว่า 80 ?,SELECT SUM(quantity)  FROM orders_details  WHERE  quantity > 80;
-อะไร  of all  assigned  orders_details  ที่ order number เป็น OR-004  ที่มีมากกว่า 83  ทั้งหมด?,"SELECT STD(quantity)  FROM orders_details  WHERE  OrderNo = ""OR-004"" ;"
-อะไร  ที่  total  PPrice  to  products ?,SELECT SUM(PPrice)  FROM products ;
-คำนวน  ที่  lowest  quantity  of  orders_details ?,SELECT MIN(quantity)  FROM orders_details ;
-จำนวน  ที่  largest  PPrice  of  products ?,SELECT MAX(PPrice)  FROM products ;
-คำนวน  is  the  lowest  of all  Ototal ?,SELECT MIN(Ototal)  FROM orderss ;
-อะไร  is  the  largest  quantity  for  orders_details  from order number OR-004 ?,"SELECT MAX(quantity)  FROM orders_details  WHERE  OrderNo = ""OR-004"" ;"
-คำนวน  is  the  average  quantity  of  orders_details ?,SELECT  AVG(quantity)  FROM orders_details ;
-จำนวน  are  the  smallest and largest  quantity product  of  orders_details ?,"SELECT MIN(quantity) , MAX(quantity)  FROM orders_details ;"
-จำนวน  are  the  smallest and largest  price product  in the  products ?,"SELECT MIN(PPrice) , MAX(PPrice)  FROM products ;"
-อะไร  are  the  smallest and largest  quantity product  by  orders_details ?,"SELECT MIN(quantity) , MAX(quantity)  FROM orders_details ;"
-อะไร  is  the  total  total order  of all  orderss  earning over 67 ?,SELECT SUM(Ototal)  FROM orderss  WHERE  Ototal > 67;
-คำนวน  are  the  smallest and largest  quantity product  to  orders_details ?,"SELECT MIN(quantity) , MAX(quantity)  FROM orders_details ;"
-จำนวน  is  the  largest  PPrice  in the  products  from product name BARF ?,"SELECT MAX(PPrice)  FROM products  WHERE  PName = ""BARF"" ;"
-คำนวน  is  the  lowest  PPrice  to  products  from product name BARF ?,"SELECT MIN(PPrice)  FROM products  WHERE  PName = ""BARF"" ;"
-คำนวน  is  the  lowest  PPrice  by  products  from product name BARF ?,"SELECT MIN(PPrice)  FROM products  WHERE  PName = ""BARF"" ;"
-จำนวน  is  the  lowest  quantity  of  orders_details ?,SELECT MIN(quantity)  FROM orders_details ;
-อะไร  is  the  average  quantity  for  orders_details ?,SELECT  AVG(quantity)  FROM orders_details ;
-อะไร  is  the  largest  of all  PPrice ?,SELECT MAX(PPrice)  FROM products ;
-คำนวน  is  the  stdev  total order  of  orderss  from order number OR-004 ?,"SELECT STD(Ototal)  FROM orderss  WHERE  OrderNo = ""OR-004"" ;"
-อะไร  is  the  total  of all  PPrice ?,SELECT SUM(PPrice)  FROM products ;
-จำนวน  is  the  lowest  quantity  of  orders_details ?,SELECT MIN(quantity)  FROM orders_details ;
-คำนวน  is  the  total  Ototal  to  orderss ?,SELECT SUM(Ototal)  FROM orderss ;
-อะไร  is  the  total  price product  of all  products  earning over 13 ?,SELECT SUM(PPrice)  FROM products  WHERE  PPrice > 13;
-อะไร  is  the  largest  quantity  by  orders_details ?,SELECT MAX(quantity)  FROM orders_details ;
-คำนวน  is  the  lowest  of all  PPrice ?,SELECT MIN(PPrice)  FROM products ;
-อะไร  is  the  total  Ototal  by  orderss ?,SELECT SUM(Ototal)  FROM orderss ;
-คำนวน  is  the  largest  Ototal  of  orderss ?,SELECT MAX(Ototal)  FROM orderss ;
-จำนวน  is  the  largest  of all  quantity ?,SELECT MAX(quantity)  FROM orders_details ;
-อะไร  is  the  total  Ototal  by  orderss  from order number OR-004 ?,"SELECT SUM(Ototal)  FROM orderss  WHERE  OrderNo = ""OR-004"" ;"
 แสดง  total order พร้อมทั้ง quantity product และ price product จากตาราง orders_details .,"SELECT  orderss.Ototal, orders_details.quantity, products.PPrice  FROM orderss  JOIN  orders_details  ON  orderss.OrderNo = orders_details.OrderNo  JOIN  products  ON  orders_details.ProductNo = products.ProductNo ;"
 แสดง  total order พร้อมทั้ง quantity product และ total product จากตาราง orders_details .,"SELECT  orderss.Ototal, orders_details.quantity, products.PTotal  FROM orderss  JOIN  orders_details  ON  orderss.OrderNo = orders_details.OrderNo  JOIN  products  ON  orders_details.ProductNo = products.ProductNo ;"
 แสดง  total order พร้อมทั้ง quantity product และ price product จากตาราง orders_details .,"SELECT  orderss.Ototal, orders_details.quantity, products.PPrice  FROM orderss  JOIN  orders_details  ON  orderss.OrderNo = orders_details.OrderNo  JOIN  products  ON  orders_details.ProductNo = products.ProductNo ;"
@@ -417,56 +332,15 @@ Listรายละเอียดของตาราง  orders_details แ�
 แก้ไข customer province ของ  CProvince จาก Chanthaburi เป็น Tvrxwnehdm ของตาราง customers  .,"UPDATE customers SET CProvince = ""Tvrxwnehdm""  WHERE CProvince = ""Chanthaburi"" ;"
 เปลี่ยน date order ของ  ODate จาก 2016-04-12 เป็น 2017-01-23 ของตาราง orderss  .,"UPDATE orderss SET ODate = ""2017-01-23""  WHERE ODate = ""2016-04-12"" ;"
 แก้ไข date order ของ  ODate จาก 2016-04-08 เป็น 2017-01-23 ของตาราง orderss  .,"UPDATE orderss SET ODate = ""2017-01-23""  WHERE ODate = ""2016-04-08"" ;"
-แก้ไข product name  <จาก SVQTYFDHMO เป็น Wxemogfspa ของตาราง products  .,"UPDATE products SET PName = ""Wxemogfspa""  WHERE PName = ""SVQTYFDHMO"" ;"
-แก้ไข quantity product  <จาก 4 เป็น 256 ของตาราง orders_details  .,UPDATE orders_details SET quantity = 256  WHERE quantity = 4 ;
-แก้ไข total order  <จาก 3 เป็น 673 ของตาราง orderss  .,UPDATE orderss SET Ototal = 673  WHERE Ototal = 3 ;
+แก้ไข product name จาก SVQTYFDHMO เป็น Wxemogfspa ของตาราง products  .,"UPDATE products SET PName = ""Wxemogfspa""  WHERE PName = ""SVQTYFDHMO"" ;"
+แก้ไข quantity product จาก 4 เป็น 256 ของตาราง orders_details  .,UPDATE orders_details SET quantity = 256  WHERE quantity = 4 ;
+แก้ไข total order จาก 3 เป็น 673 ของตาราง orderss  .,UPDATE orderss SET Ototal = 673  WHERE Ototal = 3 ;
 เปลี่ยน total product  จาก 51 เป็น 836 ของตาราง products  .,UPDATE products SET PTotal = 836  WHERE PTotal = 51 ;
 แก้ไข total product  จาก 30 เป็น 405 ของตาราง products  .,UPDATE products SET PTotal = 405  WHERE PTotal = 30 ;
 แก้ไข quantity product  จาก 12 เป็น 150 ของตาราง orders_details  .,UPDATE orders_details SET quantity = 150  WHERE quantity = 12 ;
 แก้ไข total order  จาก 5 เป็น 930 ของตาราง orderss  .,UPDATE orderss SET Ototal = 930  WHERE Ototal = 5 ;
 แก้ไข customer address  จาก 214 M.12 เป็น Wutfvbmjog ของตาราง customers  .,"UPDATE customers SET CAddress = ""Wutfvbmjog""  WHERE CAddress = ""214 M.12"" ;"
 เปลี่ยน quantity product  จาก 4 เป็น 415 ของตาราง orders_details  .,UPDATE orders_details SET quantity = 415  WHERE quantity = 4 ;
-Define the price product of all  products to 316 .,UPDATE products SET PPrice = 316 ;
-Define the quantity product of  orders_details to 986 .,UPDATE orders_details SET quantity = 986 ;
-Define the phone number of  customers to 0674153951 .,"UPDATE customers SET CPhone = ""0674153951"" ;"
-Update the quantity product of  orders_details to 716 .,UPDATE orders_details SET quantity = 716 ;
-Update the phone number of  customers to 0615233795 .,"UPDATE customers SET CPhone = ""0615233795"" ;"
-Define the customer name of all  customers to Upfkyavwjq .,"UPDATE customers SET CName = ""Upfkyavwjq"" ;"
-Update the quantity product of all  orders_details to 51 .,UPDATE orders_details SET quantity = 51 ;
-Update the quantity product of all  orders_details to 923 .,UPDATE orders_details SET quantity = 923 ;
-Define the phone number of all  customers to 0121897935 .,"UPDATE customers SET CPhone = ""0121897935"" ;"
-Define the quantity product of all  orders_details to 640 .,UPDATE orders_details SET quantity = 640 ;
-Update the customer name of all  customers to Tvrfkglhnj .,"UPDATE customers SET CName = ""Tvrfkglhnj"" ;"
-Update the quantity product of all  orders_details to 259 .,UPDATE orders_details SET quantity = 259 ;
-Change the price product of all  products to 116 .,UPDATE products SET PPrice = 116 ;
-Change the customer province of  customers to Ltuaqyrmwh .,"UPDATE customers SET CProvince = ""Ltuaqyrmwh"" ;"
-Change the customer name of  customers to Iveambzdnf .,"UPDATE customers SET CName = ""Iveambzdnf"" ;"
-Change the date order of all  orderss to 2017-01-23 .,"UPDATE orderss SET ODate = ""2017-01-23"" ;"
-Change the product name of all  products to Wshknuevqr .,"UPDATE products SET PName = ""Wshknuevqr"" ;"
-Change the date order of  orderss to 2017-01-23 .,"UPDATE orderss SET ODate = ""2017-01-23"" ;"
-Change the customer name of all  customers to Bkmozvjfre .,"UPDATE customers SET CName = ""Bkmozvjfre"" ;"
-Change the quantity product of all  orders_details to 917 .,UPDATE orders_details SET quantity = 917 ;
-Change the total order of all  orderss to 567 .,UPDATE orderss SET Ototal = 567 ;
-Change the date order of all  orderss to 2017-01-23 .,"UPDATE orderss SET ODate = ""2017-01-23"" ;"
-Change the customer province of all  customers to Gabmqihwdo .,"UPDATE customers SET CProvince = ""Gabmqihwdo"" ;"
-Change the product name of  products to Hmnoliakfq .,"UPDATE products SET PName = ""Hmnoliakfq"" ;"
-Change the quantity product of  orders_details to 667 .,UPDATE orders_details SET quantity = 667 ;
-Change the date order of  orderss to 2017-01-23 .,"UPDATE orderss SET ODate = ""2017-01-23"" ;"
-Change the date order of  orderss to 2017-01-23 .,"UPDATE orderss SET ODate = ""2017-01-23"" ;"
-Change the product name of all  products to Wikcuzxvrj .,"UPDATE products SET PName = ""Wikcuzxvrj"" ;"
-Change the customer province of all  customers to Sijvcrlhqn .,"UPDATE customers SET CProvince = ""Sijvcrlhqn"" ;"
-Change the price product of  products to 831 .,UPDATE products SET PPrice = 831 ;
-,
-Change the date order of  orderss to 2017-01-23 .,"UPDATE orderss SET ODate = ""2017-01-23"" ;"
-Change the price product of  products to 843 .,UPDATE products SET PPrice = 843 ;
-Change the phone number of  customers to 0175932472 .,"UPDATE customers SET CPhone = ""0175932472"" ;"
-Change the total order of all  orderss to 774 .,UPDATE orderss SET Ototal = 774 ;
-Change the total product of  products to 624 .,UPDATE products SET PTotal = 624 ;
-Change the total product of  products to 238 .,UPDATE products SET PTotal = 238 ;
-Change the customer province of  customers to Kxhpfgavut .,"UPDATE customers SET CProvince = ""Kxhpfgavut"" ;"
-Change the quantity product of all  orders_details to 334 .,UPDATE orders_details SET quantity = 334 ;
-Change the price product of all  products to 581 .,UPDATE products SET PPrice = 581 ;
-Change the total product of all  products to 380 .,UPDATE products SET PTotal = 380 ;
 แสดง ค่าเฉลี่ยของ total order และจำนวนของ  date order  โดยจัดกลุ่มตาม Ototal  ซึ่งค่าเฉลี่ยของ  total order ต้องมากกว่า  76.,"SELECT Ototal, AVG(Ototal), ODate =  COUNT(*) FROM orders GROUP BY Ototal HAVING AVG(Ototal)  > 76 ;"
 แสดง ค่าเฉลี่ยของ total order และจำนวนของ  date order  โดยจัดกลุ่มตาม ProductNo  ซึ่งค่าเฉลี่ยของ  total order ต้องน้อยกว่า  74.,"SELECT ProductNo, AVG(Ototal), ODate =  COUNT(*) FROM orders GROUP BY ProductNo HAVING AVG(Ototal)  < 74 ;"
 แก้ไข price product ตาราง products เป็น 54 .,UPDATE products SET PPrice = 54 ;
@@ -480,41 +354,41 @@ Change the total product of all  products to 380 .,UPDATE products SET PTotal = 
 แก้ไข customer address ของตาราง customers เป็น Mhyilroftz .,"UPDATE customers SET CAddress = ""Mhyilroftz"" ;"
 เปลี่ยน total product  จาก 30 เป็น 906 ของตาราง products  .,UPDATE products SET PTotal = 906  WHERE PTotal = 30 ;
 แก้ไข date order  จาก 2016-04-08 เป็น 2017-01-23 ของตาราง orderss  .,"UPDATE orderss SET ODate = ""2017-01-23""  WHERE ODate = ""2016-04-08"" ;"
-"เพิ่ม ข้อมูลใหม่ของ เรคขอด  (""Vfgwjk"", ""2017-01-23"", 931 , ""CU-002"") ลงในตาราง orderss .","INSERT INTO orderss  VALUES (""Vfgwjk"", ""2017-01-23"", 931 , ""CU-002"");"
-"เพิ่ม ข้อมูลใหม่ของ เรคขอด  (""Jnp"", ""Iqzpohrbne"", 803 , 326 ) ลงในตาราง products .","INSERT INTO products  VALUES (""Jnp"", ""Iqzpohrbne"", 803 , 326 );"
-"เพิ่ม ข้อมูลใหม่ของ เรคขอด  (""004"", ""OR-004"", 473 ) ลงในตาราง orders_details .","INSERT INTO orders_details  VALUES (""004"", ""OR-004"", 473 );"
-"เพิ่ม ข้อมูลใหม่ของ เรคขอด  สำหรับ (""Vfgwjk"", ""2017-01-23"", 931 , ""CU-002"") ลงในตาราง orderss .","INSERT INTO orderss  VALUES (""Vfgwjk"", ""2017-01-23"", 931 , ""CU-002"");"
-"เพิ่ม ข้อมูลใหม่ของ เรคขอด  (""Lmcrdi"", ""2017-01-23"", 861 , ""CU-002"") ลงในตาราง orderss .","INSERT INTO orderss  VALUES (""Lmcrdi"", ""2017-01-23"", 861 , ""CU-002"");"
-"เพิ่ม ข้อมูลใหม่ของ เรคขอด  (""004"", ""OR-004"", 381 ) ลงในตาราง orders_details .","INSERT INTO orders_details  VALUES (""004"", ""OR-004"", 381 );"
-"เพิ่ม ข้อมูลใหม่ของ เรคขอด  ลงในตาราง orderss (""Lmcrdi"", ""2017-01-23"", 861 , ""CU-002"") .","INSERT INTO orderss  VALUES (""Lmcrdi"", ""2017-01-23"", 861 , ""CU-002"");"
-"เพิ่ม ข้อมูลใหม่ของ เรคขอด  สำหรับ (""004"", ""OR-004"", 381 ) ลงในตาราง orders_details .","INSERT INTO orders_details  VALUES (""004"", ""OR-004"", 381 );"
-"เพิ่มข้อมูลใหม่ของ เรคขอด ลงในตาราง orders_details (""004"", ""OR-004"", 163 ) .","INSERT INTO orders_details  VALUES (""004"", ""OR-004"", 163 );"
-"เพิ่มข้อมูลใหม่ของ เรคขอด สำหรับ (""004"", ""OR-004"", 163 )ลงในตาราง orders_details .","INSERT INTO orders_details  VALUES (""004"", ""OR-004"", 163 );"
-"เพิ่มข้อมูลใหม่ของ เรคขอด สำหรับ (""Pqlemj"", ""2017-01-23"", 953 , ""CU-002"")ลงในตาราง orderss .","INSERT INTO orderss  VALUES (""Pqlemj"", ""2017-01-23"", 953 , ""CU-002"");"
-"เพิ่มข้อมูลใหม่ของ เรคขอด  (""Uqivfw"", ""Gdyvlfuk"", ""Ropbtgislj"", ""Lbqoguecrs"", ""0487635100"")ลงในตาราง customers .","INSERT INTO customers  (CustomerNo, CName, CAddress, CProvince, CPhone)  VALUES (""Uqivfw"", ""Gdyvlfuk"", ""Ropbtgislj"", ""Lbqoguecrs"", ""0487635100"");"
-ลบ OR-004 from the orders_details table .,"DELETE FROM orders_details  WHERE OrderNo = ""OR-004"" ;"
-ลบ 003 from the orders_details table .,"DELETE FROM orders_details  WHERE ProductNo = ""003"" ;"
-ลบ 001 from the orders_details table .,"DELETE FROM orders_details  WHERE ProductNo = ""001"" ;"
+"เพิ่ม ข้อมูลใหม่ของ เรคคอร์ด  (""Vfgwjk"", ""2017-01-23"", 931 , ""CU-002"") ลงในตาราง orderss .","INSERT INTO orderss  VALUES (""Vfgwjk"", ""2017-01-23"", 931 , ""CU-002"");"
+"เพิ่ม ข้อมูลใหม่ของ เรคคอร์ด  (""Jnp"", ""Iqzpohrbne"", 803 , 326 ) ลงในตาราง products .","INSERT INTO products  VALUES (""Jnp"", ""Iqzpohrbne"", 803 , 326 );"
+"เพิ่ม ข้อมูลใหม่ของ เรคคอร์ด  (""004"", ""OR-004"", 473 ) ลงในตาราง orders_details .","INSERT INTO orders_details  VALUES (""004"", ""OR-004"", 473 );"
+"เพิ่ม ข้อมูลใหม่ของ เรคคอร์ด  สำหรับ (""Vfgwjk"", ""2017-01-23"", 931 , ""CU-002"") ลงในตาราง orderss .","INSERT INTO orderss  VALUES (""Vfgwjk"", ""2017-01-23"", 931 , ""CU-002"");"
+"เพิ่ม ข้อมูลใหม่ของ เรคคอร์ด  (""Lmcrdi"", ""2017-01-23"", 861 , ""CU-002"") ลงในตาราง orderss .","INSERT INTO orderss  VALUES (""Lmcrdi"", ""2017-01-23"", 861 , ""CU-002"");"
+"เพิ่ม ข้อมูลใหม่ของ เรคคอร์ด  (""004"", ""OR-004"", 381 ) ลงในตาราง orders_details .","INSERT INTO orders_details  VALUES (""004"", ""OR-004"", 381 );"
+"เพิ่ม ข้อมูลใหม่ของ เรคคอร์ด  ลงในตาราง orderss (""Lmcrdi"", ""2017-01-23"", 861 , ""CU-002"") .","INSERT INTO orderss  VALUES (""Lmcrdi"", ""2017-01-23"", 861 , ""CU-002"");"
+"เพิ่ม ข้อมูลใหม่ของ เรคคอร์ด  สำหรับ (""004"", ""OR-004"", 381 ) ลงในตาราง orders_details .","INSERT INTO orders_details  VALUES (""004"", ""OR-004"", 381 );"
+"เพิ่มข้อมูลใหม่ของ เรคคอร์ด ลงในตาราง orders_details (""004"", ""OR-004"", 163 ) .","INSERT INTO orders_details  VALUES (""004"", ""OR-004"", 163 );"
+"เพิ่มข้อมูลใหม่ของ เรคคอร์ด สำหรับ (""004"", ""OR-004"", 163 )ลงในตาราง orders_details .","INSERT INTO orders_details  VALUES (""004"", ""OR-004"", 163 );"
+"เพิ่มข้อมูลใหม่ของ เรคคอร์ด สำหรับ (""Pqlemj"", ""2017-01-23"", 953 , ""CU-002"")ลงในตาราง orderss .","INSERT INTO orderss  VALUES (""Pqlemj"", ""2017-01-23"", 953 , ""CU-002"");"
+"เพิ่มข้อมูลใหม่ของ เรคคอร์ด  (""Uqivfw"", ""Gdyvlfuk"", ""Ropbtgislj"", ""Lbqoguecrs"", ""0487635100"")ลงในตาราง customers .","INSERT INTO customers  (CustomerNo, CName, CAddress, CProvince, CPhone)  VALUES (""Uqivfw"", ""Gdyvlfuk"", ""Ropbtgislj"", ""Lbqoguecrs"", ""0487635100"");"
+ลบ OR-004 จาก the orders_details ตาราง .,"DELETE FROM orders_details  WHERE OrderNo = ""OR-004"" ;"
+ลบ 003 จาก the orders_details ตาราง .,"DELETE FROM orders_details  WHERE ProductNo = ""003"" ;"
+ลบ 001 จาก the orders_details ตาราง .,"DELETE FROM orders_details  WHERE ProductNo = ""001"" ;"
 ลบ ข้อมูลทั้งหมด ของ ตาราง orders_detailsที่มี   เท่ากับ 6.,DELETE FROM orders_details  WHERE quantity = 6 ;
 ลบ ข้อมูลทั้งหมด ของ ตาราง orders_detailsที่มี   เท่ากับ 003.,"DELETE FROM orders_details  WHERE ProductNo = ""003"" ;"
-ลบ 12 from the orders_details table .,DELETE FROM orders_details  WHERE quantity = 12 ;
-ลบ 4 from the orders_details table .,DELETE FROM orders_details  WHERE quantity = 4 ;
-ลบ 003 from the orders_details table .,"DELETE FROM orders_details  WHERE ProductNo = ""003"" ;"
+ลบ 12 จาก the orders_details ตาราง .,DELETE FROM orders_details  WHERE quantity = 12 ;
+ลบ 4 จาก the orders_details ตาราง .,DELETE FROM orders_details  WHERE quantity = 4 ;
+ลบ 003 จาก the orders_details ตาราง .,"DELETE FROM orders_details  WHERE ProductNo = ""003"" ;"
 ลบ ข้อมูลทั้งหมด ของ ตาราง orders_detailswhich contain 6 .,DELETE FROM orders_details  WHERE quantity = 6 ;
-ลบ 4 from the orders_details table .,DELETE FROM orders_details  WHERE quantity = 4 ;
-ลบ OR-002 from the orders_details table .,"DELETE FROM orders_details  WHERE OrderNo = ""OR-002"" ;"
+ลบ 4 จาก the orders_details ตาราง .,DELETE FROM orders_details  WHERE quantity = 4 ;
+ลบ OR-002 จาก the orders_details ตาราง .,"DELETE FROM orders_details  WHERE OrderNo = ""OR-002"" ;"
 ลบ ข้อมูลทั้งหมด ของ ตาราง orders_detailswhich contain 004 .,"DELETE FROM orders_details  WHERE ProductNo = ""004"" ;"
-ลบ 001 from the orders_details table .,"DELETE FROM orders_details  WHERE ProductNo = ""001"" ;"
-ลบ 004 from the orders_details table .,"DELETE FROM orders_details  WHERE ProductNo = ""004"" ;"
+ลบ 001 จาก the orders_details ตาราง .,"DELETE FROM orders_details  WHERE ProductNo = ""001"" ;"
+ลบ 004 จาก the orders_details ตาราง .,"DELETE FROM orders_details  WHERE ProductNo = ""004"" ;"
 ลบ ข้อมูลทั้งหมด ของ ตาราง orders_details  which contain 6 .,DELETE FROM orders_details  WHERE quantity = 6 ;
 ลบ ข้อมูลทั้งหมด ของ ตาราง orders_details  which contain 12 .,DELETE FROM orders_details  WHERE quantity = 12 ;
-ลบ OR-004 from the orders_details table .,"DELETE FROM orders_details  WHERE OrderNo = ""OR-004"" ;"
-ลบ 6 from the orders_details table .,DELETE FROM orders_details  WHERE quantity = 6 ;
-ลบ OR-004 from the orders_details table .,"DELETE FROM orders_details  WHERE OrderNo = ""OR-004"" ;"
+ลบ OR-004 จาก the orders_details ตาราง .,"DELETE FROM orders_details  WHERE OrderNo = ""OR-004"" ;"
+ลบ 6 จาก the orders_details ตาราง .,DELETE FROM orders_details  WHERE quantity = 6 ;
+ลบ OR-004 จาก the orders_details ตาราง .,"DELETE FROM orders_details  WHERE OrderNo = ""OR-004"" ;"
 ลบ ข้อมูลทั้งหมด ของ ตาราง orders_details  ที่มีOrderNo เท่ากับ OR-004 .,"DELETE FROM orders_details  WHERE OrderNo = ""OR-004"" ;"
-ลบ 12 from the orders_details table .,DELETE FROM orders_details  WHERE quantity = 12 ;
+ลบ 12 จาก the orders_details ตาราง .,DELETE FROM orders_details  WHERE quantity = 12 ;
 ลบ ข้อมูลทั้งหมด ของ ตาราง orders_details  ที่มีOrderNo เท่ากับ OR-004 .,"DELETE FROM orders_details  WHERE OrderNo = ""OR-004"" ;"
-ลบ OR-002 from the orders_details table .,"DELETE FROM orders_details  WHERE OrderNo = ""OR-002"" ;"
+ลบ OR-002 จาก the orders_details ตาราง .,"DELETE FROM orders_details  WHERE OrderNo = ""OR-002"" ;"
 ลบ ข้อมูลทั้งหมด ของ ตาราง orders_details  ที่มีProductNo เท่ากับ 001 .,"DELETE FROM orders_details  WHERE ProductNo = ""001"" ;"
 ลบ ข้อมูลทั้งหมด ของ ตาราง orders_details  ที่มีProductNo เท่ากับ 003 .,"DELETE FROM orders_details  WHERE ProductNo = ""003"" ;"
 ลบ 4 ออกจากตาราง orders_details .,DELETE FROM orders_details  WHERE quantity = 4 ;
@@ -527,11 +401,11 @@ Change the total product of all  products to 380 .,UPDATE products SET PTotal = 
 ลบ ข้อมูลทั้งหมด ของ ตาราง customers .,DELETE FROM customers ;
 ลบ ข้อมูลทั้งหมด ของ ตาราง orderss .,DELETE FROM orderss ;
 ลบ ข้อมูลทั้งหมด ของ ตาราง orders_details .,DELETE FROM orders_details ;
-ลบ ข้อมูลทั้งหมด ของ ตาราง products .,DELETE FROM products ;
+ลบข้อมูลทั้งหมด ของ ตาราง products .,DELETE FROM products ;
 ลบ ข้อมูลทั้งหมดของ products .,DELETE FROM products ;
-Delete all records in the products table  which contain 62 price product.,DELETE FROM products  WHERE PPrice = 62 ;
-Delete all records in the orderss table  which contain 2016-04-08 date order.,"DELETE FROM orderss  WHERE ODate = ""2016-04-08"" ;"
-Delete all records in the products table  which contain 30 total product.,DELETE FROM products  WHERE PTotal = 30 ;
-Delete ข้อมูลทั้งหมด fromตาราง customers  ที่มีcustomer province เท่ากับ Chanthaburi .,"DELETE FROM customers  WHERE CProvince = ""Chanthaburi"" ;"
-Cut ข้อมูลทั้งหมด fromตาราง customers  ที่มีphone number เท่ากับ 0864364549 .,"DELETE FROM customers  WHERE CPhone = ""0864364549"" ;"
-Cut ข้อมูลทั้งหมด inตาราง orderss  ที่มีtotal order เท่ากับ 5 .,DELETE FROM orderss  WHERE Ototal = 5 ;
+ลบข้อมูลของตาราง products ที่มี price product เท่ากับ 62,DELETE FROM products  WHERE PPrice = 62 ;
+ลบข้อมูลของตาราง orderss ที่มี date order เท่ากับ 2016-04-08,"DELETE FROM orderss  WHERE ODate = ""2016-04-08"" ;"
+ลบข้อมูลของตาราง products ที่มี total product เท่ากับ 30,DELETE FROM products  WHERE PTotal = 30 ;
+ลบข้อมูลของตาราง customers ที่มี customer province เท่ากับ Chanthaburi .,"DELETE FROM customers  WHERE CProvince = ""Chanthaburi"" ;"
+ลบข้อมูลของตาราง customers ที่มี phone number เท่ากับ 0864364549 .,"DELETE FROM customers  WHERE CPhone = ""0864364549"" ;"
+ลบข้อมูลของตาราง orderss ที่มี total order เท่ากับ 5 .,DELETE FROM orderss  WHERE Ototal = 5 ;

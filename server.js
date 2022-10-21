@@ -124,6 +124,7 @@ require("./app/routes/sec.routes.js")(app);
 require("./app/routes/student.routes.js")(app);
 require("./app/routes/quest.routes.js")(app);
 require("./app/routes/answer.routes.js")(app);
+require("./app/routes/time.routes.js")(app);
 
 // set port, listen for requests
 const PORT = process.env.PORT || 8080;

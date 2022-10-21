@@ -1,1 +1,3 @@
 nodemon server.js
+npm uninstall sqlite3
+npm install sqlite3
