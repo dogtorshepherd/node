@@ -6,7 +6,7 @@ const Sec = function(sec) {
   this.teacher = sec.teacher;
 };
 Sec.getAll = (result) => {
-  let query = `SELECT sec.sec_id, subject.title as subject, CONCAT(user.firstname, " ", user.lastname) as teacher
+  let query = `SELECT sec.sec_id, CONCAT(subject.subject_id, " - ", subject.title) as subject, CONCAT(user.firstname, " ", user.lastname) as teacher
               FROM ((sec
               INNER JOIN subject ON sec.subject_id = subject.subject_id)
               INNER JOIN user ON sec.teacher_id = user.user_id);`;
