@@ -13,7 +13,7 @@ Quest.create = (quest, result) => {
   const fs = require("fs");
   const { parse } = require("csv-parse");
   const {
-    ruleForm: { score, type, level, amount },
+    ruleForm: { check, type, level1, level2, level3, level4 },
     secId,
   } = quest;
   let insertQuest = [];
@@ -50,91 +50,396 @@ Quest.create = (quest, result) => {
       }
     })
     .on("end", function () {
-      for (let i = 0; i < amount; i++) {
-        const randomNumForInsert = Math.floor(Math.random() * insertQuest.length)
-        const randomNumForUpdate = Math.floor(Math.random() * updateQuest.length)
-        const randomNumForDelete = Math.floor(Math.random() * deleteQuest.length)
-        const randomNumForSelect = Math.floor(Math.random() * selectQuest.length)
-        insertQuestSelected.push(insertQuest[randomNumForInsert])
-        insertAnswerSelected.push(insertAnswer[randomNumForInsert])
-        updateQuestSelected.push(updateQuest[randomNumForUpdate])
-        updateAnswerSelected.push(updateAnswer[randomNumForUpdate])
-        deleteQuestSelected.push(deleteQuest[randomNumForDelete])
-        deleteAnswerSelected.push(deleteAnswer[randomNumForDelete])
-        selectQuestSelected.push(selectQuest[randomNumForSelect])
-        selectAnswerSelected.push(selectAnswer[randomNumForSelect])
-      }
-      console.log("secId : " + secId)
-      console.log("level : " + level.toString())
-      console.log("score : " + score)
-      for (let i = 0; i < type.length; i++) {
-        if(type[i] === "INSERT"){
-          for (let i = 0; i < amount; i++) {
-            const sec_id = secId
-            const question = insertQuestSelected[i]
-            const answer = insertAnswerSelected[i]
-            sql_exam.query("INSERT INTO exam SET ?", {sec_id, question, answer, score}, (err, res) => {
-              if (err) {
-                console.log("error: ", err);
-              }
-              // result(null, res);
-              // console.log("created exam: ", { exam_id: res.insertId, ...newExam });
-            });
+      if (type == "INSERT") {
+        if (level1.amount > 0) {
+          for (let i = 0; i < level1.amount; i++) {
+            const randomNumForInsert = Math.floor(
+              Math.random() * insertQuest.length
+            );
+            insertQuestSelected.push(insertQuest[randomNumForInsert]);
+            insertAnswerSelected.push(insertAnswer[randomNumForInsert]);
           }
-          // console.log("Have INSERT")
-          // console.log("Q : " + insertQuestSelected[0])
-          // console.log("A : " + insertAnswerSelected[0])
-        } else if(type[i] === "UPDATE") {
-          for (let i = 0; i < amount; i++) {
-            const sec_id = secId
-            const question = updateQuestSelected[i]
-            const answer = updateAnswerSelected[i]
-            sql_exam.query("INSERT INTO exam SET ?", {sec_id, question, answer, score}, (err, res) => {
-              if (err) {
-                console.log("error: ", err);
+          for (let i = 0; i < level1.amount; i++) {
+            const sec_id = secId;
+            const question = insertQuestSelected[i];
+            const answer = insertAnswerSelected[i];
+            const score = level1.score;
+            sql_exam.query(
+              "INSERT INTO exam SET ?",
+              { sec_id, question, answer, score },
+              (err, res) => {
+                if (err) {
+                  console.log("error: ", err);
+                }
               }
-              // result(null, res);
-              // console.log("created exam: ", { exam_id: res.insertId, ...newExam });
-            });
+            );
           }
-          // console.log("Have UPDATE")
-          // console.log("Q : " + updateQuestSelected[0])
-          // console.log("A : " + updateAnswerSelected[0])
-        } else if(type[i] === "DELETE") {
-          for (let i = 0; i < amount; i++) {
-            const sec_id = secId
-            const question = deleteQuestSelected[i]
-            const answer = deleteAnswerSelected[i]
-            sql_exam.query("INSERT INTO exam SET ?", {sec_id, question, answer, score}, (err, res) => {
-              if (err) {
-                console.log("error: ", err);
+        }
+        if (level2.amount > 0) {
+          for (let i = 0; i < level2.amount; i++) {
+            const randomNumForInsert = Math.floor(
+              Math.random() * insertQuest.length
+            );
+            insertQuestSelected.push(insertQuest[randomNumForInsert]);
+            insertAnswerSelected.push(insertAnswer[randomNumForInsert]);
+          }
+          for (let i = 0; i < level2.amount; i++) {
+            const sec_id = secId;
+            const question = insertQuestSelected[i];
+            const answer = insertAnswerSelected[i];
+            const score = level2.score;
+            sql_exam.query(
+              "INSERT INTO exam SET ?",
+              { sec_id, question, answer, score },
+              (err, res) => {
+                if (err) {
+                  console.log("error: ", err);
+                }
               }
-              // result(null, res);
-              // console.log("created exam: ", { exam_id: res.insertId, ...newExam });
-            });
+            );
           }
-          // console.log("Have DELETE")
-          // console.log("Q : " + deleteQuestSelected[0])
-          // console.log("A : " + deleteAnswerSelected[0])
-        } else if(type[i] === "SELECT") {
-          for (let i = 0; i < amount; i++) {
-            const sec_id = secId
-            const question = selectQuestSelected[i]
-            const answer = selectAnswerSelected[i]
-            sql_exam.query("INSERT INTO exam SET ?", {sec_id, question, answer, score}, (err, res) => {
-              if (err) {
-                console.log("error: ", err);
+        }
+        if (level3.amount > 0) {
+          for (let i = 0; i < level3.amount; i++) {
+            const randomNumForInsert = Math.floor(
+              Math.random() * insertQuest.length
+            );
+            insertQuestSelected.push(insertQuest[randomNumForInsert]);
+            insertAnswerSelected.push(insertAnswer[randomNumForInsert]);
+          }
+          for (let i = 0; i < level3.amount; i++) {
+            const sec_id = secId;
+            const question = insertQuestSelected[i];
+            const answer = insertAnswerSelected[i];
+            const score = level3.score;
+            sql_exam.query(
+              "INSERT INTO exam SET ?",
+              { sec_id, question, answer, score },
+              (err, res) => {
+                if (err) {
+                  console.log("error: ", err);
+                }
               }
-              // result(null, res);
-              // console.log("created exam: ", { exam_id: res.insertId, ...newExam });
-            });
+            );
           }
-          // console.log("Have SELECT")
-          // console.log("Q : " + selectQuestSelected[0])
-          // console.log("A : " + selectAnswerSelected[0])
+        }
+        if (level4.amount > 0) {
+          for (let i = 0; i < level4.amount; i++) {
+            const randomNumForInsert = Math.floor(
+              Math.random() * insertQuest.length
+            );
+            insertQuestSelected.push(insertQuest[randomNumForInsert]);
+            insertAnswerSelected.push(insertAnswer[randomNumForInsert]);
+          }
+          for (let i = 0; i < level4.amount; i++) {
+            const sec_id = secId;
+            const question = insertQuestSelected[i];
+            const answer = insertAnswerSelected[i];
+            const score = level4.score;
+            sql_exam.query(
+              "INSERT INTO exam SET ?",
+              { sec_id, question, answer, score },
+              (err, res) => {
+                if (err) {
+                  console.log("error: ", err);
+                }
+              }
+            );
+          }
+        }
+      } else if (type == "UPDATE") {
+        if (level1.amount > 0) {
+          for (let i = 0; i < level1.amount; i++) {
+            const randomNumForUpdate = Math.floor(
+              Math.random() * updateQuest.length
+            );
+            updateQuestSelected.push(updateQuest[randomNumForUpdate]);
+            updateAnswerSelected.push(updateAnswer[randomNumForUpdate]);
+          }
+          for (let i = 0; i < level1.amount; i++) {
+            const sec_id = secId;
+            const question = updateQuestSelected[i];
+            const answer = updateAnswerSelected[i];
+            const score = level1.score;
+            sql_exam.query(
+              "INSERT INTO exam SET ?",
+              { sec_id, question, answer, score },
+              (err, res) => {
+                if (err) {
+                  console.log("error: ", err);
+                }
+              }
+            );
+          }
+        }
+        if (level2.amount > 0) {
+          for (let i = 0; i < level2.amount; i++) {
+            const randomNumForUpdate = Math.floor(
+              Math.random() * updateQuest.length
+            );
+            updateQuestSelected.push(updateQuest[randomNumForUpdate]);
+            updateAnswerSelected.push(updateAnswer[randomNumForUpdate]);
+          }
+          for (let i = 0; i < level2.amount; i++) {
+            const sec_id = secId;
+            const question = updateQuestSelected[i];
+            const answer = updateAnswerSelected[i];
+            const score = level2.score;
+            sql_exam.query(
+              "INSERT INTO exam SET ?",
+              { sec_id, question, answer, score },
+              (err, res) => {
+                if (err) {
+                  console.log("error: ", err);
+                }
+              }
+            );
+          }
+        }
+        if (level3.amount > 0) {
+          for (let i = 0; i < level3.amount; i++) {
+            const randomNumForUpdate = Math.floor(
+              Math.random() * updateQuest.length
+            );
+            updateQuestSelected.push(updateQuest[randomNumForUpdate]);
+            updateAnswerSelected.push(updateAnswer[randomNumForUpdate]);
+          }
+          for (let i = 0; i < level3.amount; i++) {
+            const sec_id = secId;
+            const question = updateQuestSelected[i];
+            const answer = updateAnswerSelected[i];
+            const score = level3.score;
+            sql_exam.query(
+              "INSERT INTO exam SET ?",
+              { sec_id, question, answer, score },
+              (err, res) => {
+                if (err) {
+                  console.log("error: ", err);
+                }
+              }
+            );
+          }
+        }
+        if (level4.amount > 0) {
+          for (let i = 0; i < level4.amount; i++) {
+            const randomNumForUpdate = Math.floor(
+              Math.random() * updateQuest.length
+            );
+            updateQuestSelected.push(updateQuest[randomNumForUpdate]);
+            updateAnswerSelected.push(updateAnswer[randomNumForUpdate]);
+          }
+          for (let i = 0; i < level4.amount; i++) {
+            const sec_id = secId;
+            const question = updateQuestSelected[i];
+            const answer = updateAnswerSelected[i];
+            const score = level4.score;
+            sql_exam.query(
+              "INSERT INTO exam SET ?",
+              { sec_id, question, answer, score },
+              (err, res) => {
+                if (err) {
+                  console.log("error: ", err);
+                }
+              }
+            );
+          }
+        }
+      } else if (type == "DELETE") {
+        if (level1.amount > 0) {
+          for (let i = 0; i < level1.amount; i++) {
+            const randomNumForDelete = Math.floor(
+              Math.random() * deleteQuest.length
+            );
+            deleteQuestSelected.push(deleteQuest[randomNumForDelete]);
+            deleteAnswerSelected.push(deleteAnswer[randomNumForDelete]);
+          }
+          for (let i = 0; i < level1.amount; i++) {
+            const sec_id = secId;
+            const question = deleteQuestSelected[i];
+            const answer = deleteAnswerSelected[i];
+            const score = level1.score;
+            sql_exam.query(
+              "INSERT INTO exam SET ?",
+              { sec_id, question, answer, score },
+              (err, res) => {
+                if (err) {
+                  console.log("error: ", err);
+                }
+              }
+            );
+          }
+        }
+        if (level2.amount > 0) {
+          for (let i = 0; i < level2.amount; i++) {
+            const randomNumForDelete = Math.floor(
+              Math.random() * deleteQuest.length
+            );
+            deleteQuestSelected.push(deleteQuest[randomNumForDelete]);
+            deleteAnswerSelected.push(deleteAnswer[randomNumForDelete]);
+          }
+          for (let i = 0; i < level2.amount; i++) {
+            const sec_id = secId;
+            const question = deleteQuestSelected[i];
+            const answer = deleteAnswerSelected[i];
+            const score = level2.score;
+            sql_exam.query(
+              "INSERT INTO exam SET ?",
+              { sec_id, question, answer, score },
+              (err, res) => {
+                if (err) {
+                  console.log("error: ", err);
+                }
+              }
+            );
+          }
+        }
+        if (level3.amount > 0) {
+          for (let i = 0; i < level3.amount; i++) {
+            const randomNumForDelete = Math.floor(
+              Math.random() * deleteQuest.length
+            );
+            deleteQuestSelected.push(deleteQuest[randomNumForDelete]);
+            deleteAnswerSelected.push(deleteAnswer[randomNumForDelete]);
+          }
+          for (let i = 0; i < level3.amount; i++) {
+            const sec_id = secId;
+            const question = deleteQuestSelected[i];
+            const answer = deleteAnswerSelected[i];
+            const score = level3.score;
+            sql_exam.query(
+              "INSERT INTO exam SET ?",
+              { sec_id, question, answer, score },
+              (err, res) => {
+                if (err) {
+                  console.log("error: ", err);
+                }
+              }
+            );
+          }
+        }
+        if (level4.amount > 0) {
+          for (let i = 0; i < level4.amount; i++) {
+            const randomNumForDelete = Math.floor(
+              Math.random() * deleteQuest.length
+            );
+            deleteQuestSelected.push(deleteQuest[randomNumForDelete]);
+            deleteAnswerSelected.push(deleteAnswer[randomNumForDelete]);
+          }
+          for (let i = 0; i < level4.amount; i++) {
+            const sec_id = secId;
+            const question = deleteQuestSelected[i];
+            const answer = deleteAnswerSelected[i];
+            const score = level4.score;
+            sql_exam.query(
+              "INSERT INTO exam SET ?",
+              { sec_id, question, answer, score },
+              (err, res) => {
+                if (err) {
+                  console.log("error: ", err);
+                }
+              }
+            );
+          }
+        }
+      } else if (type == "SELECT") {
+        if (level1.amount > 0) {
+          for (let i = 0; i < level1.amount; i++) {
+            const randomNumForSelect = Math.floor(
+              Math.random() * selectQuest.length
+            );
+            selectQuestSelected.push(selectQuest[randomNumForSelect]);
+            selectAnswerSelected.push(selectAnswer[randomNumForSelect]);
+          }
+          for (let i = 0; i < level1.amount; i++) {
+            const sec_id = secId;
+            const question = selectQuestSelected[i];
+            const answer = selectAnswerSelected[i];
+            const score = level1.score;
+            sql_exam.query(
+              "INSERT INTO exam SET ?",
+              { sec_id, question, answer, score },
+              (err, res) => {
+                if (err) {
+                  console.log("error: ", err);
+                }
+              }
+            );
+          }
+        }
+        if (level2.amount > 0) {
+          for (let i = 0; i < level2.amount; i++) {
+            const randomNumForSelect = Math.floor(
+              Math.random() * selectQuest.length
+            );
+            selectQuestSelected.push(selectQuest[randomNumForSelect]);
+            selectAnswerSelected.push(selectAnswer[randomNumForSelect]);
+          }
+          for (let i = 0; i < level2.amount; i++) {
+            const sec_id = secId;
+            const question = selectQuestSelected[i];
+            const answer = selectAnswerSelected[i];
+            const score = level2.score;
+            sql_exam.query(
+              "INSERT INTO exam SET ?",
+              { sec_id, question, answer, score },
+              (err, res) => {
+                if (err) {
+                  console.log("error: ", err);
+                }
+              }
+            );
+          }
+        }
+        if (level3.amount > 0) {
+          for (let i = 0; i < level3.amount; i++) {
+            const randomNumForSelect = Math.floor(
+              Math.random() * selectQuest.length
+            );
+            selectQuestSelected.push(selectQuest[randomNumForSelect]);
+            selectAnswerSelected.push(selectAnswer[randomNumForSelect]);
+          }
+          for (let i = 0; i < level3.amount; i++) {
+            const sec_id = secId;
+            const question = selectQuestSelected[i];
+            const answer = selectAnswerSelected[i];
+            const score = level3.score;
+            sql_exam.query(
+              "INSERT INTO exam SET ?",
+              { sec_id, question, answer, score },
+              (err, res) => {
+                if (err) {
+                  console.log("error: ", err);
+                }
+              }
+            );
+          }
+        }
+        if (level4.amount > 0) {
+          for (let i = 0; i < level4.amount; i++) {
+            const randomNumForSelect = Math.floor(
+              Math.random() * selectQuest.length
+            );
+            selectQuestSelected.push(selectQuest[randomNumForSelect]);
+            selectAnswerSelected.push(selectAnswer[randomNumForSelect]);
+          }
+          for (let i = 0; i < level4.amount; i++) {
+            const sec_id = secId;
+            const question = selectQuestSelected[i];
+            const answer = selectAnswerSelected[i];
+            const score = level4.score;
+            sql_exam.query(
+              "INSERT INTO exam SET ?",
+              { sec_id, question, answer, score },
+              (err, res) => {
+                if (err) {
+                  console.log("error: ", err);
+                }
+              }
+            );
+          }
         }
       }
-      result(null, {"RESULT":"OK"});
+      result(null, { RESULT: "OK" });
       return;
     })
     .on("error", function (error) {
@@ -143,16 +448,18 @@ Quest.create = (quest, result) => {
 };
 
 Quest.createSingle = (quest, result) => {
-  const {
-    question, answer, score, sec_id
-  } = quest;
-  sql_exam.query("INSERT INTO exam SET ?", {sec_id, question, answer, score}, (err, res) => {
-    if (err) {
-      console.log("error: ", err);
+  const { question, answer, score, sec_id } = quest;
+  sql_exam.query(
+    "INSERT INTO exam SET ?",
+    { sec_id, question, answer, score },
+    (err, res) => {
+      if (err) {
+        console.log("error: ", err);
+      }
+      result(null, res);
+      return;
     }
-    result(null, res);
-    return;
-  });
+  );
 };
 
 Quest.getAll = (secId, result) => {
